@@ -22,10 +22,17 @@
   .meta strong{color:#c0392b}
   .stat-bar{display:flex;gap:12px;margin:20px 0 30px;flex-wrap:wrap}
   .stat{flex:1;min-width:130px;padding:14px 16px;border-radius:6px;
-        background:#f8f9fb;border-left:4px solid var(--c,#34495e)}
+        background:#f8f9fb;border-left:4px solid var(--c,#34495e);
+        text-decoration:none;color:inherit;display:block;
+        transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .stat:hover{background:#fff;transform:translateY(-2px);
+              box-shadow:0 4px 14px rgba(15,42,95,0.12);cursor:pointer}
   .stat-num{font-size:22px;font-weight:700;color:#1a2533}
-  .stat-lbl{font-size:13px;color:#7f8c8d;margin-top:2px}
-  .sec{margin-bottom:36px}
+  .stat-lbl{font-size:13px;color:#7f8c8d;margin-top:2px;display:flex;align-items:center;gap:4px}
+  .stat-lbl::after{content:"›";margin-left:auto;color:var(--c,#34495e);font-size:16px;
+                    font-weight:700;opacity:0;transition:opacity .15s}
+  .stat:hover .stat-lbl::after{opacity:1}
+  .sec{margin-bottom:36px;scroll-margin-top:20px}
   .sec-title{font-size:18px;font-weight:700;color:#1a2533;display:flex;align-items:center;
              gap:10px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e1e5ea}
   .sec-bar{width:4px;height:18px;background:var(--sec-color);border-radius:2px}
@@ -40,8 +47,19 @@
   .col-region{font-weight:600;color:#2c3e50}
   .cat-main{font-weight:600;color:var(--sec-color);font-size:13px}
   .cat-date{color:#95a5a6;font-size:12px;margin-top:3px}
-  .info-title{font-weight:600;color:#1a2533;margin-bottom:5px;line-height:1.4}
+  .info-title{font-weight:600;color:#1a2533;margin-bottom:5px;line-height:1.4;
+               display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
   .info-body{font-size:13px;color:#5d6d7e}
+  /* 腾讯关联小标签 */
+  .tx-tag{display:inline-block;padding:2px 9px;font-size:11px;font-weight:500;
+          border-radius:10px;letter-spacing:0.5px;line-height:1.5;white-space:nowrap;
+          vertical-align:middle;flex-shrink:0}
+  .tx-tag.tx-direct{background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;
+                     box-shadow:0 1px 3px rgba(192,57,43,0.25)}
+  .tx-tag.tx-industry{background:linear-gradient(135deg,#d4a24b,#e8c070);color:#fff;
+                       box-shadow:0 1px 3px rgba(184,146,74,0.25)}
+  .tx-tag.tx-rival{background:linear-gradient(135deg,#6b3a6b,#8e5a8e);color:#fff;
+                    box-shadow:0 1px 3px rgba(107,58,107,0.25)}
   .col-src a{color:#2980b9;text-decoration:none;font-size:13px;display:block;margin-bottom:2px}
   .col-src a:hover{text-decoration:underline}
   .col-ana{color:#2c3e50;font-size:13.5px;line-height:1.7}
@@ -58,21 +76,21 @@
     <div class="eyebrow">EAST CHINA · GOVERNMENT AFFAIRS BRIEFING</div>
     <h1>华东政务信息 · 2026 年 4 月</h1>
     <div class="meta">
-      <span>📅 最后更新：<strong>2026-04-22 12:57</strong></span>
+      <span>📅 最后更新：<strong>2026-04-22 14:09</strong></span>
       <span>📊 本月累计：<strong>24 条</strong></span>
       <span>🏛 腾讯华东区域公共事务团队</span>
     </div>
   </header>
 
   <div class="stat-bar">
-    <div class="stat" style="--c:#8b2e2e"><div class="stat-num">1</div><div class="stat-lbl">人事变动</div></div>
-    <div class="stat" style="--c:#0f2a5f"><div class="stat-num">8</div><div class="stat-lbl">领导动态</div></div>
-    <div class="stat" style="--c:#8b4513"><div class="stat-num">5</div><div class="stat-lbl">重大政策</div></div>
-    <div class="stat" style="--c:#2c5f5d"><div class="stat-num">5</div><div class="stat-lbl">行业信息</div></div>
-    <div class="stat" style="--c:#6b3a6b"><div class="stat-num">5</div><div class="stat-lbl">友商动态</div></div>
+    <a class="stat" href="#sec-hr" style="--c:#8b2e2e"><div class="stat-num">1</div><div class="stat-lbl">人事变动</div></a>
+    <a class="stat" href="#sec-leader" style="--c:#0f2a5f"><div class="stat-num">8</div><div class="stat-lbl">领导动态</div></a>
+    <a class="stat" href="#sec-policy" style="--c:#8b4513"><div class="stat-num">5</div><div class="stat-lbl">重大政策</div></a>
+    <a class="stat" href="#sec-industry" style="--c:#2c5f5d"><div class="stat-num">5</div><div class="stat-lbl">行业信息</div></a>
+    <a class="stat" href="#sec-rival" style="--c:#6b3a6b"><div class="stat-num">5</div><div class="stat-lbl">友商动态</div></a>
   </div>
 
-    <section class="sec" style="--sec-color:#8b2e2e">
+    <section class="sec" id="sec-hr" style="--sec-color:#8b2e2e">
       <h2 class="sec-title"><span class="sec-bar"></span>一、人事变动<span class="sec-count">1条</span></h2>
       <table class="sec-table">
         <thead>
@@ -101,7 +119,7 @@
         </tbody>
       </table>
     </section>
-    <section class="sec" style="--sec-color:#0f2a5f">
+    <section class="sec" id="sec-leader" style="--sec-color:#0f2a5f">
       <h2 class="sec-title"><span class="sec-bar"></span>二、领导动态<span class="sec-count">8条</span></h2>
       <table class="sec-table">
         <thead>
@@ -199,7 +217,7 @@
           <div class="cat-date">2026-04-05</div>
         </td>
         <td class="col-info">
-          <div class="info-title">徐汇区委书记曹立强部署&quot;一人公司&quot;12条措施</div>
+          <div class="info-title">徐汇区委书记曹立强部署&quot;一人公司&quot;12条措施<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">曹立强明确表示&quot;抢抓&#x27;一人公司&#x27;发展机遇&quot;，出台12条措施支持超级创业者。</div>
         </td>
         <td class="col-src"><a href="https://www.sohu.com/a/1008312791_122585292" target="_blank" rel="noopener">搜狐</a></td>
@@ -221,7 +239,7 @@
         </tbody>
       </table>
     </section>
-    <section class="sec" style="--sec-color:#8b4513">
+    <section class="sec" id="sec-policy" style="--sec-color:#8b4513">
       <h2 class="sec-title"><span class="sec-bar"></span>三、重大政策<span class="sec-count">5条</span></h2>
       <table class="sec-table">
         <thead>
@@ -241,7 +259,7 @@
           <div class="cat-date">2026-04-21</div>
         </td>
         <td class="col-info">
-          <div class="info-title">上海市政府办公厅印发《国家数字经济创新发展试验区（上海）实施方案》</div>
+          <div class="info-title">上海市政府办公厅印发《国家数字经济创新发展试验区（上海）实施方案》<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">沪府办发〔2026〕5号。</div>
         </td>
         <td class="col-src"><a href="https://www.shanghai.gov.cn/nw12344/20260421/9edf5d5c1b2244298c315304349d0963.html" target="_blank" rel="noopener">上海市政府</a> / <a href="https://finance.sina.com.cn/stock/bxjj/2026-04-21/doc-inhvfumi0201564.shtml" target="_blank" rel="noopener">新浪财经</a></td>
@@ -254,7 +272,7 @@
           <div class="cat-date">2026-04-20</div>
         </td>
         <td class="col-info">
-          <div class="info-title">市经信委等7部门印发《上海市推动产业互联网平台赋能产业发展行动方案（2026—2028年）》</div>
+          <div class="info-title">市经信委等7部门印发《上海市推动产业互联网平台赋能产业发展行动方案（2026—2028年）》<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">由上海市经济和信息化委员会等七部门联合印发。</div>
         </td>
         <td class="col-src"><a href="https://news.qq.com/rain/a/20260420A047R200" target="_blank" rel="noopener">腾讯新闻</a> / <a href="https://www.sheitc.sh.gov.cn/" target="_blank" rel="noopener">上海市经信委</a></td>
@@ -267,7 +285,7 @@
           <div class="cat-date">2026-04-04</div>
         </td>
         <td class="col-info">
-          <div class="info-title">上海印发《关于支持游戏电竞产业发展的若干举措》（&quot;游戏沪十条&quot;）</div>
+          <div class="info-title">上海印发《关于支持游戏电竞产业发展的若干举措》（&quot;游戏沪十条&quot;）<span class="tx-tag tx-direct">🅣 与腾讯直接相关</span></div>
           <div class="info-body">由上海市委宣传部牵头多部门联合印发。</div>
         </td>
         <td class="col-src"><a href="https://finance.sina.com.cn/roll/2026-04-04/doc-inhtipvz7964223.shtml" target="_blank" rel="noopener">新浪财经</a> / <a href="https://www3.xinhuanet.com/government/20260407/548a08f7499f4ab8b4077e2b90d7fb71/c.html" target="_blank" rel="noopener">新华网</a></td>
@@ -280,7 +298,7 @@
           <div class="cat-date">2026-04-08</div>
         </td>
         <td class="col-info">
-          <div class="info-title">市人社局印发《上海市支持人工智能赋能人力资源服务业转型升级的若干措施》</div>
+          <div class="info-title">市人社局印发《上海市支持人工智能赋能人力资源服务业转型升级的若干措施》<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">由上海市人力资源和社会保障局印发。</div>
         </td>
         <td class="col-src"><a href="https://www.shanghai.gov.cn/yshqrgzn/index.html" target="_blank" rel="noopener">上海市AI专栏</a></td>
@@ -293,7 +311,7 @@
           <div class="cat-date">2026-04-21</div>
         </td>
         <td class="col-info">
-          <div class="info-title">市政府新闻办发布会部署知识产权强市建设与新质生产力发展</div>
+          <div class="info-title">市政府新闻办发布会部署知识产权强市建设与新质生产力发展<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">4月21日下午，上海市政府新闻办举行发布会，市知识产权局局长朱启高主发布，市科委副主任翟金国、市高级人民法院副院长曹洁、浦东新区副区长李慧出席。</div>
         </td>
         <td class="col-src"><a href="https://finance.sina.com.cn/jjxw/2026-04-21/doc-inhvfyta6169412.shtml" target="_blank" rel="noopener">新浪财经</a> / <a href="https://news.qq.com/rain/a/20260421A072AU00" target="_blank" rel="noopener">腾讯新闻</a> / <a href="https://www.chinanews.com/gn/2026/04-21/10608034.shtml" target="_blank" rel="noopener">中国新闻网</a></td>
@@ -302,7 +320,7 @@
         </tbody>
       </table>
     </section>
-    <section class="sec" style="--sec-color:#2c5f5d">
+    <section class="sec" id="sec-industry" style="--sec-color:#2c5f5d">
       <h2 class="sec-title"><span class="sec-bar"></span>四、行业信息<span class="sec-count">5条</span></h2>
       <table class="sec-table">
         <thead>
@@ -322,7 +340,7 @@
           <div class="cat-date">2026-04-17</div>
         </td>
         <td class="col-info">
-          <div class="info-title">2026人工智能基础设施峰会在沪召开</div>
+          <div class="info-title">2026人工智能基础设施峰会在沪召开<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">主题&quot;智算筑基 生态共生&quot;，由DOIT传媒主办，上海市计算机学会等支持。</div>
         </td>
         <td class="col-src"><a href="https://finance.sina.com.cn/tech/roll/2026-04-18/doc-inhuxchh0289985.shtml" target="_blank" rel="noopener">新浪科技</a></td>
@@ -335,7 +353,7 @@
           <div class="cat-date">2026-04-17</div>
         </td>
         <td class="col-info">
-          <div class="info-title">2026奇点智能技术大会在沪举办</div>
+          <div class="info-title">2026奇点智能技术大会在沪举办<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">04-17至18，CSDN主办，汇聚50+全球AI及大模型领域顶级专家。</div>
         </td>
         <td class="col-src"><a href="https://ml-summit.org/" target="_blank" rel="noopener">官方网站</a></td>
@@ -348,7 +366,7 @@
           <div class="cat-date">2026-04-20</div>
         </td>
         <td class="col-info">
-          <div class="info-title">2026上海网络出版管理工作会议召开</div>
+          <div class="info-title">2026上海网络出版管理工作会议召开<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">2025年全市网络游戏销售收入1707亿元，电竞产业66.83亿元，上海电竞产业位列全球第二。</div>
         </td>
         <td class="col-src"><a href="https://www.shanghai.gov.cn/nw4411/20260421/31cdc2fad639473ba4ca078211693e9a.html" target="_blank" rel="noopener">上海市政府</a> / <a href="https://finance.sina.com.cn/jjxw/2026-04-20/doc-inhvcvua6851251.shtml" target="_blank" rel="noopener">新浪财经</a></td>
@@ -361,7 +379,7 @@
           <div class="cat-date">2026-04-08</div>
         </td>
         <td class="col-info">
-          <div class="info-title">徐汇滨江一体化发展全新升级，&quot;模速空间3.0&quot;启动</div>
+          <div class="info-title">徐汇滨江一体化发展全新升级，&quot;模速空间3.0&quot;启动<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">徐汇滨江共建共治联盟2026年第一次全体会议在西岸漩心举行。</div>
         </td>
         <td class="col-src"><a href="https://www.shanghai.gov.cn/nw15343/20260410/9b45039944464e7b8c0645b7edd03696.html" target="_blank" rel="noopener">上海市政府</a> / <a href="https://news.qq.com/rain/a/20260408A07N0X00" target="_blank" rel="noopener">腾讯新闻</a></td>
@@ -374,7 +392,7 @@
           <div class="cat-date">2026-04-17</div>
         </td>
         <td class="col-info">
-          <div class="info-title">智元（AGIBOT）2026合作伙伴大会在沪张江举办</div>
+          <div class="info-title">智元（AGIBOT）2026合作伙伴大会在沪张江举办<span class="tx-tag tx-industry">腾讯业务赛道</span></div>
           <div class="info-body">2500位来自34个国家和地区的合作伙伴参会，同步发布4款本体新品及4大AI大模型、7大解决方案。</div>
         </td>
         <td class="col-src"><a href="https://app.xinhuanet.com/news/article.html?articleId=202604184e11eb5bc28d45e89e719836eca84f86" target="_blank" rel="noopener">新华网</a> / <a href="https://blog.my321.cn/ai-daily-20260417/" target="_blank" rel="noopener">AI日报</a></td>
@@ -383,7 +401,7 @@
         </tbody>
       </table>
     </section>
-    <section class="sec" style="--sec-color:#6b3a6b">
+    <section class="sec" id="sec-rival" style="--sec-color:#6b3a6b">
       <h2 class="sec-title"><span class="sec-bar"></span>五、友商动态<span class="sec-count">5条</span></h2>
       <table class="sec-table">
         <thead>
@@ -403,7 +421,7 @@
           <div class="cat-date">2026-04-16</div>
         </td>
         <td class="col-info">
-          <div class="info-title">阿里通义实验室开源 Qwen3.6-35B-A3B 模型</div>
+          <div class="info-title">阿里通义实验室开源 Qwen3.6-35B-A3B 模型<span class="tx-tag tx-rival">竞品参考</span></div>
           <div class="info-body">350亿总参数，激活参数仅30亿，主打轻量高效与智能体编程。</div>
         </td>
         <td class="col-src"><a href="https://finance.sina.com.cn/jjxw/2026-04-16/doc-inhutfxu2696667.shtml" target="_blank" rel="noopener">新浪财经</a> / <a href="https://news.qq.com/rain/a/20260417A01S0100" target="_blank" rel="noopener">智东西</a></td>
@@ -416,7 +434,7 @@
           <div class="cat-date">2026-04-05</div>
         </td>
         <td class="col-info">
-          <div class="info-title">阿里 Qwen3.6-Plus 发布，通义全家桶密集迭代</div>
+          <div class="info-title">阿里 Qwen3.6-Plus 发布，通义全家桶密集迭代<span class="tx-tag tx-rival">竞品参考</span></div>
           <div class="info-body">阿里通义一周内发布三款模型，覆盖通用推理、多模态轻量化方向。</div>
         </td>
         <td class="col-src"><a href="https://blog.csdn.net/weixin_45526015/article/details/160103208" target="_blank" rel="noopener">CSDN</a></td>
@@ -429,7 +447,7 @@
           <div class="cat-date">2026-04-05</div>
         </td>
         <td class="col-info">
-          <div class="info-title">字节跳动全双工语音大模型上线</div>
+          <div class="info-title">字节跳动全双工语音大模型上线<span class="tx-tag tx-rival">竞品参考</span></div>
           <div class="info-body">豆包全双工实时语音能力正式开放。</div>
         </td>
         <td class="col-src"><a href="https://blog.csdn.net/weixin_45526015/article/details/160103208" target="_blank" rel="noopener">CSDN</a></td>
@@ -442,7 +460,7 @@
           <div class="cat-date">2026-04-14</div>
         </td>
         <td class="col-info">
-          <div class="info-title">华为×柳钢集团发布钢铁行业大模型&quot;玄铁&quot;</div>
+          <div class="info-title">华为×柳钢集团发布钢铁行业大模型&quot;玄铁&quot;<span class="tx-tag tx-rival">竞品参考</span></div>
           <div class="info-body">广西柳钢集团携手华为、中国移动发布广西首个钢铁行业大模型；同日华为与贵州瓮福集团打造智慧工厂全球样板。</div>
         </td>
         <td class="col-src"><a href="https://www.woshipm.com/ai/6376973.html" target="_blank" rel="noopener">人人都是产品经理</a></td>
@@ -455,7 +473,7 @@
           <div class="cat-date">2026-04-21</div>
         </td>
         <td class="col-info">
-          <div class="info-title">月之暗面深夜发布开源新模型 Kimi K2.6</div>
+          <div class="info-title">月之暗面深夜发布开源新模型 Kimi K2.6<span class="tx-tag tx-rival">竞品参考</span></div>
           <div class="info-body">4月21日深夜，月之暗面正式上线并开源 Kimi K2.6，256K 上下文、原生多模态（图片+视频）、长程编码能力全面升级，公开 benchmark 对标 Claude Opus 4.6。</div>
         </td>
         <td class="col-src"><a href="https://news.qq.com/rain/a/20260421A017GN00" target="_blank" rel="noopener">腾讯新闻</a> / <a href="https://ofox.ai/zh/blog/kimi-k2-6-api-guide-2026/" target="_blank" rel="noopener">ofox.ai 技术解读</a></td>

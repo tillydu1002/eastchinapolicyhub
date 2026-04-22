@@ -39,7 +39,13 @@
 
   .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:48px}
   .card{background:#fff;padding:24px 20px;border-radius:4px;
-        box-shadow:0 2px 12px rgba(15,42,95,0.08);border-top:3px solid var(--gold);text-align:center}
+        box-shadow:0 2px 12px rgba(15,42,95,0.08);border-top:3px solid var(--gold);text-align:center;
+        text-decoration:none;color:inherit;display:block;position:relative;
+        transition:transform .15s ease,box-shadow .15s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,42,95,0.15)}
+  .card:hover .card-arrow{opacity:1;transform:translateX(2px)}
+  .card-arrow{position:absolute;top:10px;right:12px;font-size:14px;color:var(--gold);
+              opacity:0;transition:opacity .15s,transform .15s}
   .card .num{font-size:32px;font-weight:600;color:var(--navy);font-family:Georgia,serif;margin-bottom:4px}
   .card .label{font-size:12px;color:var(--gray);letter-spacing:1px}
   .card.total{border-top-color:var(--navy)}
@@ -73,12 +79,17 @@
   .side .panel{background:#fff;padding:24px 28px;border-radius:4px;
                box-shadow:0 2px 12px rgba(15,42,95,0.06);margin-bottom:24px}
 
-  .chart-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:13px}
+  .chart-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:13px;
+             text-decoration:none;color:inherit;padding:4px 6px;margin-left:-6px;margin-right:-6px;
+             border-radius:3px;transition:background .15s}
+  .chart-row:hover{background:var(--cream)}
   .chart-row .lbl{width:72px;color:var(--ink);flex-shrink:0}
+  .chart-row:hover .lbl{color:var(--navy);font-weight:600}
   .chart-row .bar-wrap{flex:1;background:var(--line);height:16px;border-radius:2px;
                        overflow:hidden;position:relative}
   .chart-row .bar{height:100%;background:linear-gradient(90deg,var(--navy),var(--navy-light));
-                  border-radius:2px}
+                  border-radius:2px;transition:background .15s}
+  .chart-row:hover .bar{background:linear-gradient(90deg,var(--gold),#d4a24b)}
   .chart-row .val{width:32px;text-align:right;color:var(--navy);font-weight:600;font-family:Georgia,serif}
 
   .archive-item{display:block;padding:14px 16px;background:var(--cream);border-radius:3px;
@@ -118,7 +129,7 @@
     </div>
     <div class="meta">
       出品 · 腾讯华东区域公共事务团队<br>
-      <span class="update">最后更新：2026-04-22 12:57</span>
+      <span class="update">最后更新：2026-04-22 14:09</span>
     </div>
   </div>
 </header>
@@ -128,18 +139,18 @@
   <!-- 当月进行中大卡片 -->
   <div class="hero">
     <div class="hl">
-      <div class="banner">【2026 年 4 月 · 进行中】截至 04月21日 12:57，已收录 24 条<span class="state-badge inprogress">进行中</span></div>
+      <div class="banner">【2026 年 4 月 · 进行中】截至 04月21日 14:09，已收录 24 条<span class="state-badge inprogress">进行中</span></div>
       <div class="sub">每日 09:00 / 17:00 累加更新 · 月末自动封存归档</div>
     </div>
     <a class="cta" href="archive/2026-04.html">查看完整月报 →</a>
   </div>
 
   <div class="stats">
-    <div class="card total"><div class="num">24</div><div class="label">本月条目总数</div></div>
-    <div class="card"><div class="num">1</div><div class="label">人事变动</div></div>
-    <div class="card"><div class="num">8</div><div class="label">领导动态</div></div>
-    <div class="card"><div class="num">5</div><div class="label">重大政策</div></div>
-    <div class="card"><div class="num">10</div><div class="label">行业 / 友商</div></div>
+    <a class="card total" href="archive/2026-04.html"><span class="card-arrow">→</span><div class="num">24</div><div class="label">本月条目总数</div></a>
+    <a class="card" href="archive/2026-04.html#sec-hr"><span class="card-arrow">→</span><div class="num">1</div><div class="label">人事变动</div></a>
+    <a class="card" href="archive/2026-04.html#sec-leader"><span class="card-arrow">→</span><div class="num">8</div><div class="label">领导动态</div></a>
+    <a class="card" href="archive/2026-04.html#sec-policy"><span class="card-arrow">→</span><div class="num">5</div><div class="label">重大政策</div></a>
+    <a class="card" href="archive/2026-04.html#sec-industry"><span class="card-arrow">→</span><div class="num">10</div><div class="label">行业 / 友商</div></a>
   </div>
 
   <div class="main-grid">
@@ -202,31 +213,31 @@
       <div class="panel">
         <div class="section-title"><span class="tag"></span><h2>板块分布 · 本月</h2></div>
         
-        <div class="chart-row">
+        <a class="chart-row" href="archive/2026-04.html#sec-hr">
           <div class="lbl">人事变动</div>
           <div class="bar-wrap"><div class="bar" style="width:12.5%"></div></div>
           <div class="val">1</div>
-        </div>
-        <div class="chart-row">
+        </a>
+        <a class="chart-row" href="archive/2026-04.html#sec-leader">
           <div class="lbl">领导动态</div>
           <div class="bar-wrap"><div class="bar" style="width:100.0%"></div></div>
           <div class="val">8</div>
-        </div>
-        <div class="chart-row">
+        </a>
+        <a class="chart-row" href="archive/2026-04.html#sec-policy">
           <div class="lbl">重大政策</div>
           <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
           <div class="val">5</div>
-        </div>
-        <div class="chart-row">
+        </a>
+        <a class="chart-row" href="archive/2026-04.html#sec-industry">
           <div class="lbl">行业信息</div>
           <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
           <div class="val">5</div>
-        </div>
-        <div class="chart-row">
+        </a>
+        <a class="chart-row" href="archive/2026-04.html#sec-rival">
           <div class="lbl">友商动态</div>
           <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
           <div class="val">5</div>
-        </div>
+        </a>
       </div>
 
       <div class="panel">
