@@ -3,7 +3,7 @@
   "title": "华东政务信息",
   "subtitle": "EAST CHINA · GOVERNMENT AFFAIRS BRIEFING",
   "team": "腾讯华东区域公共事务团队",
-  "updated_at": "2026-04-22 11:05",
+  "updated_at": "2026-04-22 17:10",
   "locked": false,
   "sections": {
     "hr": [
@@ -389,29 +389,18 @@
         "region": "上海",
         "category": "policy",
         "title": "国务院印发《关于推进服务业扩能提质的意见》",
-        "info": "国务院印发《关于推进服务业扩能提质的意见》（国发〔2026〕7号），4月22日新华社全文发布",
-        "summary": "4月22日，新华社受权全文发布国务院《关于推进服务业扩能提质的意见》。意见明确到2030年服务业增加值规模迈上100万亿元台阶，首次提出鼓励政府机关、企事业单位采购大模型、智能体等新型数字服务，支持平台企业向制造业、现代物流、金融科技等领域延伸；将上海等城市列为现代服务业高质量发展先行区，支持开展服务贸易创新发展试点，对腾讯云、微信生态、混元大模型等企业级服务进入政企市场形成直接政策利好。",
-        "sources": [
-          {
-            "label": "新华社",
-            "url": "https://www.news.cn/politics/zywj/20260422/fwyktzyj.htm"
-          },
-          {
-            "label": "中国政府网",
-            "url": "https://www.gov.cn/zhengce/content/202604/content_fwye.htm"
-          }
-        ],
+        "info": "【已撤回】国家级政策，不符合\"区域=上海市/徐汇区主体印发\"口径",
+        "summary": "【本条已于 2026-04-22 17:10 按用户口径撤回：本栏只收录上海市/徐汇区主体印发的政策文件，国家级政策不在范围内。】",
+        "sources": [],
         "tags": [
-          "国务院",
-          "服务业",
-          "大模型采购",
-          "平台经济",
-          "上海先行区"
+          "已撤回"
         ],
-        "status": "published",
+        "status": "rejected",
         "ai_draft": true,
         "reviewed_by": "auto-publish",
-        "reviewed_at": "2026-04-22T17:05:00+08:00"
+        "reviewed_at": "2026-04-22T17:05:00+08:00",
+        "rejected_at": "2026-04-22T17:10:00+08:00",
+        "rejected_reason": "范围越界：国家级政策，本栏只收录上海市/徐汇区主体印发的政策文件"
       }
     ],
     "industry": [
@@ -549,24 +538,18 @@
         "region": "上海",
         "category": "industry",
         "title": "DeepSeek V4模型4月下旬启动灰度测试",
-        "info": "DeepSeek V4 大模型于4月下旬在上海等地开发者社区启动灰度测试",
-        "summary": "4月22日，多家开发者社区与AI垂直媒体报道，DeepSeek V4模型已于4月下旬启动小范围灰度测试，上下文长度、多模态理解和推理成本较V3显著优化，上海本地AI初创与金融科技团队是首批接入对象。V4若如期放开将进一步压低国内大模型 API 价格，对上海AI产业带和腾讯混元、阿里通义在2B市场的竞争格局产生影响，需关注后续正式发布节奏与企业级定价策略。",
-        "sources": [
-          {
-            "label": "第一财经",
-            "url": "https://www.yicai.com/news/deepseekv4-grayscale-20260422.html"
-          }
-        ],
+        "info": "【已撤回】信源不可靠、无上海官方/主流媒体确证",
+        "summary": "【本条已于 2026-04-22 17:10 撤回：无上海官方或头部媒体实锤信源，属于拿不准的条目，按宁缺毋滥口径不应入库。】",
+        "sources": [],
         "tags": [
-          "DeepSeek",
-          "大模型",
-          "灰度测试",
-          "AI产业"
+          "已撤回"
         ],
-        "status": "published",
+        "status": "rejected",
         "ai_draft": true,
         "reviewed_by": "auto-publish",
-        "reviewed_at": "2026-04-22T17:05:00+08:00"
+        "reviewed_at": "2026-04-22T17:05:00+08:00",
+        "rejected_at": "2026-04-22T17:10:00+08:00",
+        "rejected_reason": "信源不可靠，拿不准应进 notes 而非 items"
       }
     ],
     "rival": [
@@ -698,29 +681,39 @@
         "region": "上海",
         "category": "rival",
         "title": "字节跳动2025年净利润同比下滑超70%",
-        "info": "字节跳动2025年年报数据显示净利润同比下滑超70%，4月20日起持续发酵",
-        "summary": "4月20日起，每日经济新闻、第一财经等陆续披露字节跳动2025年财务数据，全年净利润同比下滑超70%，主因大模型与AI基础设施投入激增、TikTok海外监管成本上升及广告主投放结构变化。字节上海团队在豆包、剪映、火山引擎上海区的人员与预算预计进入收紧周期，为上海AI人才市场与腾讯在音视频、广告、企业级AI赛道的竞争态势带来新变量，后续需关注其组织调整与新一轮融资动向。",
-        "sources": [
-          {
-            "label": "每日经济新闻",
-            "url": "https://www.nbd.com.cn/articles/2026-04-20/bytedance-2025-net-profit.html"
-          },
-          {
-            "label": "第一财经",
-            "url": "https://www.yicai.com/news/bytedance-annual-report-20260420.html"
-          }
-        ],
+        "info": "【已撤回】信源 URL 未经核实，summary 含推测成分",
+        "summary": "【本条已于 2026-04-22 17:10 撤回：所引用的每经/第一财经具体报道 URL 未确证，\"字节上海团队收紧\"属推测而非信源原话，按宁缺毋滥口径不应入库。】",
+        "sources": [],
         "tags": [
-          "字节跳动",
-          "年报",
-          "AI投入",
-          "友商动态"
+          "已撤回"
         ],
-        "status": "published",
+        "status": "rejected",
         "ai_draft": true,
         "reviewed_by": "auto-publish",
-        "reviewed_at": "2026-04-22T17:05:00+08:00"
+        "reviewed_at": "2026-04-22T17:05:00+08:00",
+        "rejected_at": "2026-04-22T17:10:00+08:00",
+        "rejected_reason": "信源未核实 + 推测性内容超出报道事实"
       }
     ]
-  }
+  },
+  "change_log": [
+    {
+      "op": "reject",
+      "id": "policy-006",
+      "at": "2026-04-22T17:10:00+08:00",
+      "reason": "范围越界：国家级政策，本栏只收录上海市/徐汇区主体印发的政策文件"
+    },
+    {
+      "op": "reject",
+      "id": "industry-006",
+      "at": "2026-04-22T17:10:00+08:00",
+      "reason": "信源不可靠，拿不准应进 notes 而非 items"
+    },
+    {
+      "op": "reject",
+      "id": "rival-006",
+      "at": "2026-04-22T17:10:00+08:00",
+      "reason": "信源未核实 + 推测性内容超出报道事实"
+    }
+  ]
 }
