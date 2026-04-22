@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>2026人工智能基础设施峰会在沪召开 · 华东政务信息</title>
+<style>
+  *{box-sizing:border-box}
+  :root{--navy:#0f2a5f;--navy-light:#1a3a7a;--gold:#b8924a;--ink:#2c3e50;
+        --gray:#7f8c8d;--line:#e1e5ea;--cream:#f8f6f0;--sec:#2c5f5d}
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       background:#f4f5f7;color:var(--ink);line-height:1.7}
+  .wrap{max-width:920px;margin:0 auto;padding:28px 32px 60px}
+  .nav{display:flex;gap:10px;margin-bottom:20px;font-size:13px;flex-wrap:wrap}
+  .nav a{color:var(--navy);text-decoration:none;padding:6px 14px;background:#fff;
+        border-radius:3px;border-left:3px solid var(--gold);transition:background .15s}
+  .nav a:hover{background:var(--cream)}
+  .breadcrumb{font-size:12px;color:var(--gray);letter-spacing:1px;margin-bottom:12px}
+  .breadcrumb a{color:var(--navy);text-decoration:none}
+  .breadcrumb a:hover{text-decoration:underline}
+
+  .card{background:#fff;border-radius:6px;box-shadow:0 3px 16px rgba(15,42,95,0.08);
+        overflow:hidden}
+  .card-head{padding:28px 36px 22px;background:linear-gradient(135deg,#fff 0%,var(--cream) 100%);
+             border-top:4px solid var(--sec);border-bottom:1px solid var(--line)}
+  .badges{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .sec-badge{display:inline-block;padding:4px 14px;background:var(--sec);color:#fff;
+             font-size:12px;font-weight:600;border-radius:3px;letter-spacing:1px}
+  .date-badge{font-size:13px;color:var(--gray);font-family:Georgia,serif}
+  .region-badge{font-size:13px;color:var(--navy);font-weight:600}
+  .id-badge{margin-left:auto;font-family:"Courier New",monospace;font-size:11px;color:#bbb}
+  h1{font-size:26px;margin:0 0 10px;font-weight:700;color:var(--ink);line-height:1.4}
+  .info-line{font-size:15px;color:#4a5568;line-height:1.75;margin-top:8px}
+
+  /* 腾讯标签 */
+  .tx-tag{display:inline-block;padding:2px 10px;font-size:11px;font-weight:500;
+          border-radius:10px;letter-spacing:0.5px;line-height:1.6}
+  .tx-tag.tx-direct{background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff}
+  .tx-tag.tx-industry{background:linear-gradient(135deg,#d4a24b,#e8c070);color:#fff}
+  .tx-tag.tx-rival{background:linear-gradient(135deg,#6b3a6b,#8e4b8e);color:#fff}
+
+  /* 重要度 */
+  .score-row{display:flex;align-items:center;gap:12px;margin-top:16px;
+             padding:10px 14px;background:rgba(184,146,74,0.08);border-radius:4px}
+  .score-label{font-size:12px;color:var(--gold);font-weight:600;letter-spacing:1px}
+  .score-bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+  .score-fill{height:100%;background:linear-gradient(90deg,var(--gold),#d4a24b);
+              width:50%;transition:width .4s}
+  .score-val{font-family:Georgia,serif;font-weight:700;color:var(--gold);font-size:15px}
+
+  /* 正文区 */
+  .card-body{padding:28px 36px 36px}
+  .block{margin-bottom:28px}
+  .block:last-child{margin-bottom:0}
+  .block-title{display:flex;align-items:center;gap:10px;margin-bottom:12px;
+              padding-bottom:8px;border-bottom:2px solid var(--navy)}
+  .block-title .bar{width:5px;height:18px;background:var(--gold)}
+  .block-title h2{font-size:16px;color:var(--navy);font-weight:600;letter-spacing:1.5px;margin:0}
+  .block-body{font-size:15px;color:#3a4856;line-height:1.95;text-align:justify}
+  .block-body p{margin:0 0 12px}
+
+  /* 信源 */
+  .src-list{list-style:none;padding:0;margin:0}
+  .src-list li{padding:10px 14px;margin-bottom:8px;background:var(--cream);
+               border-radius:3px;border-left:3px solid var(--gold);
+               display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .src-list a{color:var(--navy);font-weight:600;text-decoration:none;font-size:14px}
+  .src-list a:hover{color:var(--gold);text-decoration:underline}
+  .src-url{font-size:11px;color:var(--gray);font-family:"Courier New",monospace;
+          word-break:break-all;flex:1;min-width:0}
+  .src-empty{padding:14px;color:var(--gray);font-size:13px;text-align:center;
+             background:var(--cream);border-radius:3px}
+
+  /* 关键词标签 */
+  .tag-row{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .keyword{font-size:11px;color:var(--navy);background:rgba(15,42,95,0.08);
+          padding:3px 10px;border-radius:10px;letter-spacing:0.5px}
+
+  /* 底部返回 */
+  .footer-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+  .footer-nav a{flex:1;min-width:140px;padding:12px 18px;background:#fff;
+               border-radius:4px;color:var(--navy);text-decoration:none;font-size:13px;
+               text-align:center;box-shadow:0 2px 8px rgba(15,42,95,0.06);
+               transition:transform .15s,box-shadow .15s,color .15s}
+  .footer-nav a:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(15,42,95,0.14);color:var(--gold)}
+
+  footer.site{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
+              text-align:center;font-size:12px;color:var(--gray);letter-spacing:1px}
+  .gold{color:var(--gold)}
+
+  @media (max-width:720px){
+    .wrap{padding:20px 16px 40px}
+    .card-head,.card-body{padding-left:20px;padding-right:20px}
+    h1{font-size:21px}
+    .id-badge{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="breadcrumb">
+    <a href="../index.html">首页</a> › <a href="../archive/2026-04.html">2026年4月月报</a> › 行业信息
+  </div>
+
+  <div class="nav">
+    <a href="../index.html">← 返回首页</a>
+    <a href="../archive/2026-04.html#sec-industry">返回「行业信息」板块</a>
+  </div>
+
+  <article class="card">
+    <div class="card-head">
+      <div class="badges">
+        <span class="sec-badge">行业信息</span>
+        <span class="date-badge">2026-04-17</span>
+        <span class="region-badge">上海</span>
+        <span class="tx-tag tx-industry">腾讯业务赛道</span>
+        <span class="id-badge">#industry-001</span>
+      </div>
+      <h1>2026人工智能基础设施峰会在沪召开</h1>
+      <div class="info-line">AI 基础设施</div>
+
+      <div class="score-row">
+        <span class="score-label">重要程度</span>
+        <div class="score-bar"><div class="score-fill"></div></div>
+        <span class="score-val">★ 50 / 100</span>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>原始信息</h2></div>
+        <div class="block-body"><p>主题&quot;智算筑基 生态共生&quot;，由DOIT传媒主办，上海市计算机学会等支持。</p></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>解读分析</h2></div>
+        <div class="block-body"><p>峰会汇聚中国联通、Solidigm、浪潮数据、西部数据、神州数码等AI Infra头部厂商，聚焦算力、存力、液冷、CXL等底层系统创新。标志AI产业从模型参数竞赛转向系统性基础设施创新阶段，上海作为国内主要算力枢纽承接产业风向。</p></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>信源</h2></div>
+        <ul class="src-list">
+      <li><a href="https://finance.sina.com.cn/tech/roll/2026-04-18/doc-inhuxchh0289985.shtml" target="_blank" rel="noopener">新浪科技</a><span class="src-url">https://finance.sina.com.cn/tech/roll/2026-04-18/doc-inhuxchh0289985.shtml</span></li>
+    </ul>
+      </div>
+
+      <div class="block"><div class="block-title"><span class="bar"></span><h2>关键词</h2></div><div class="tag-row"><span class="keyword">#算力</span> <span class="keyword">#AI Infra</span> <span class="keyword">#液冷</span></div></div>
+
+    </div>
+  </article>
+
+  <div class="footer-nav">
+    <a href="../index.html">← 返回首页</a>
+    <a href="../archive/2026-04.html">查看完整 2026年4月 月报</a>
+    <a href="../archive/2026-04.html#sec-industry">「行业信息」板块全览</a>
+  </div>
+
+  <footer class="site">
+    腾讯华东区域公共事务团队 · <span class="gold">East China PA</span> · 生成于 2026-04-22 14:40
+  </footer>
+
+</div>
+</body>
+</html>

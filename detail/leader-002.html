@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>陈吉宁率代表团赴云南考察沪滇协作 · 华东政务信息</title>
+<style>
+  *{box-sizing:border-box}
+  :root{--navy:#0f2a5f;--navy-light:#1a3a7a;--gold:#b8924a;--ink:#2c3e50;
+        --gray:#7f8c8d;--line:#e1e5ea;--cream:#f8f6f0;--sec:#0f2a5f}
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       background:#f4f5f7;color:var(--ink);line-height:1.7}
+  .wrap{max-width:920px;margin:0 auto;padding:28px 32px 60px}
+  .nav{display:flex;gap:10px;margin-bottom:20px;font-size:13px;flex-wrap:wrap}
+  .nav a{color:var(--navy);text-decoration:none;padding:6px 14px;background:#fff;
+        border-radius:3px;border-left:3px solid var(--gold);transition:background .15s}
+  .nav a:hover{background:var(--cream)}
+  .breadcrumb{font-size:12px;color:var(--gray);letter-spacing:1px;margin-bottom:12px}
+  .breadcrumb a{color:var(--navy);text-decoration:none}
+  .breadcrumb a:hover{text-decoration:underline}
+
+  .card{background:#fff;border-radius:6px;box-shadow:0 3px 16px rgba(15,42,95,0.08);
+        overflow:hidden}
+  .card-head{padding:28px 36px 22px;background:linear-gradient(135deg,#fff 0%,var(--cream) 100%);
+             border-top:4px solid var(--sec);border-bottom:1px solid var(--line)}
+  .badges{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .sec-badge{display:inline-block;padding:4px 14px;background:var(--sec);color:#fff;
+             font-size:12px;font-weight:600;border-radius:3px;letter-spacing:1px}
+  .date-badge{font-size:13px;color:var(--gray);font-family:Georgia,serif}
+  .region-badge{font-size:13px;color:var(--navy);font-weight:600}
+  .id-badge{margin-left:auto;font-family:"Courier New",monospace;font-size:11px;color:#bbb}
+  h1{font-size:26px;margin:0 0 10px;font-weight:700;color:var(--ink);line-height:1.4}
+  .info-line{font-size:15px;color:#4a5568;line-height:1.75;margin-top:8px}
+
+  /* 腾讯标签 */
+  .tx-tag{display:inline-block;padding:2px 10px;font-size:11px;font-weight:500;
+          border-radius:10px;letter-spacing:0.5px;line-height:1.6}
+  .tx-tag.tx-direct{background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff}
+  .tx-tag.tx-industry{background:linear-gradient(135deg,#d4a24b,#e8c070);color:#fff}
+  .tx-tag.tx-rival{background:linear-gradient(135deg,#6b3a6b,#8e4b8e);color:#fff}
+
+  /* 重要度 */
+  .score-row{display:flex;align-items:center;gap:12px;margin-top:16px;
+             padding:10px 14px;background:rgba(184,146,74,0.08);border-radius:4px}
+  .score-label{font-size:12px;color:var(--gold);font-weight:600;letter-spacing:1px}
+  .score-bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+  .score-fill{height:100%;background:linear-gradient(90deg,var(--gold),#d4a24b);
+              width:53%;transition:width .4s}
+  .score-val{font-family:Georgia,serif;font-weight:700;color:var(--gold);font-size:15px}
+
+  /* 正文区 */
+  .card-body{padding:28px 36px 36px}
+  .block{margin-bottom:28px}
+  .block:last-child{margin-bottom:0}
+  .block-title{display:flex;align-items:center;gap:10px;margin-bottom:12px;
+              padding-bottom:8px;border-bottom:2px solid var(--navy)}
+  .block-title .bar{width:5px;height:18px;background:var(--gold)}
+  .block-title h2{font-size:16px;color:var(--navy);font-weight:600;letter-spacing:1.5px;margin:0}
+  .block-body{font-size:15px;color:#3a4856;line-height:1.95;text-align:justify}
+  .block-body p{margin:0 0 12px}
+
+  /* 信源 */
+  .src-list{list-style:none;padding:0;margin:0}
+  .src-list li{padding:10px 14px;margin-bottom:8px;background:var(--cream);
+               border-radius:3px;border-left:3px solid var(--gold);
+               display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .src-list a{color:var(--navy);font-weight:600;text-decoration:none;font-size:14px}
+  .src-list a:hover{color:var(--gold);text-decoration:underline}
+  .src-url{font-size:11px;color:var(--gray);font-family:"Courier New",monospace;
+          word-break:break-all;flex:1;min-width:0}
+  .src-empty{padding:14px;color:var(--gray);font-size:13px;text-align:center;
+             background:var(--cream);border-radius:3px}
+
+  /* 关键词标签 */
+  .tag-row{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .keyword{font-size:11px;color:var(--navy);background:rgba(15,42,95,0.08);
+          padding:3px 10px;border-radius:10px;letter-spacing:0.5px}
+
+  /* 底部返回 */
+  .footer-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+  .footer-nav a{flex:1;min-width:140px;padding:12px 18px;background:#fff;
+               border-radius:4px;color:var(--navy);text-decoration:none;font-size:13px;
+               text-align:center;box-shadow:0 2px 8px rgba(15,42,95,0.06);
+               transition:transform .15s,box-shadow .15s,color .15s}
+  .footer-nav a:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(15,42,95,0.14);color:var(--gold)}
+
+  footer.site{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
+              text-align:center;font-size:12px;color:var(--gray);letter-spacing:1px}
+  .gold{color:var(--gold)}
+
+  @media (max-width:720px){
+    .wrap{padding:20px 16px 40px}
+    .card-head,.card-body{padding-left:20px;padding-right:20px}
+    h1{font-size:21px}
+    .id-badge{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="breadcrumb">
+    <a href="../index.html">首页</a> › <a href="../archive/2026-04.html">2026年4月月报</a> › 领导动态
+  </div>
+
+  <div class="nav">
+    <a href="../index.html">← 返回首页</a>
+    <a href="../archive/2026-04.html#sec-leader">返回「领导动态」板块</a>
+  </div>
+
+  <article class="card">
+    <div class="card-head">
+      <div class="badges">
+        <span class="sec-badge">领导动态</span>
+        <span class="date-badge">2026-04-17</span>
+        <span class="region-badge">上海</span>
+        
+        <span class="id-badge">#leader-002</span>
+      </div>
+      <h1>陈吉宁率代表团赴云南考察沪滇协作</h1>
+      <div class="info-line">对口协作</div>
+
+      <div class="score-row">
+        <span class="score-label">重要程度</span>
+        <div class="score-bar"><div class="score-fill"></div></div>
+        <span class="score-val">★ 53 / 100</span>
+      </div>
+    </div>
+
+    <div class="card-body">
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>原始信息</h2></div>
+        <div class="block-body"><p>04-17至18，陈吉宁率上海市代表团赴云南考察交流，云南省委书记王宁陪同。</p></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>解读分析</h2></div>
+        <div class="block-body"><p>考察聚焦&quot;十五五&quot;开局之年沪滇对口协作，深入企业园区、医院学校、城镇乡村调研产业帮扶、民生项目。释放信号：上海继续把产业协作、消费帮扶、人才支援作为沪滇协作主抓手，推动从&quot;输血&quot;向&quot;造血&quot;转变。</p></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title"><span class="bar"></span><h2>信源</h2></div>
+        <ul class="src-list">
+      <li><a href="https://yn.yunnan.cn/system/2026/04/18/033971133.shtml" target="_blank" rel="noopener">云南网</a><span class="src-url">https://yn.yunnan.cn/system/2026/04/18/033971133.shtml</span></li>
+      <li><a href="http://www.hh.gov.cn/info/1221/1257472.htm" target="_blank" rel="noopener">红河州政府</a><span class="src-url">http://www.hh.gov.cn/info/1221/1257472.htm</span></li>
+    </ul>
+      </div>
+
+      <div class="block"><div class="block-title"><span class="bar"></span><h2>关键词</h2></div><div class="tag-row"><span class="keyword">#陈吉宁</span> <span class="keyword">#沪滇协作</span> <span class="keyword">#对口帮扶</span></div></div>
+
+    </div>
+  </article>
+
+  <div class="footer-nav">
+    <a href="../index.html">← 返回首页</a>
+    <a href="../archive/2026-04.html">查看完整 2026年4月 月报</a>
+    <a href="../archive/2026-04.html#sec-leader">「领导动态」板块全览</a>
+  </div>
+
+  <footer class="site">
+    腾讯华东区域公共事务团队 · <span class="gold">East China PA</span> · 生成于 2026-04-22 14:40
+  </footer>
+
+</div>
+</body>
+</html>
