@@ -16,10 +16,20 @@
         "info": "市政府决定，任命卢山同志为上海虹桥国际中央商务区管理委员会主任。",
         "summary": "卢山，男，现任上海市人民政府副市长（副部级）、上海虹桥国际中央商务区管委会主任。此次任命系兼任明确，强化虹桥商务区作为长三角国际开放枢纽的统筹协调能级，推动\"大虹桥\"在国际贸易、会展、总部经济等方面的能级跃升。",
         "sources": [
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260410A01KUG00" },
-          { "label": "上海市政府", "url": "https://www.shanghai.gov.cn/nw11432/index.html" }
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260410A01KUG00"
+          },
+          {
+            "label": "上海市政府",
+            "url": "https://www.shanghai.gov.cn/nw11432/index.html"
+          }
         ],
-        "tags": ["副部级", "虹桥商务区", "兼任"],
+        "tags": [
+          "副部级",
+          "虹桥商务区",
+          "兼任"
+        ],
         "status": "published",
         "ai_draft": false
       }
@@ -34,10 +44,21 @@
         "info": "市委书记陈吉宁在崇明区调研沪东中华造船等企业，部署崇明世界级生态岛建设与\"十五五\"规划落实。",
         "summary": "陈吉宁强调深入学习贯彻习近平总书记考察上海重要讲话精神，把为人民出政绩、以实干出政绩贯穿于\"十五五\"规划落地落实，一以贯之推进崇明世界级生态岛建设。调研沪东中华造船时强调巩固LNG船等高端海工装备的全球领先地位。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/jjxw/2026-04-15/doc-inhupvfk3597186.shtml" },
-          { "label": "上海规划资源局", "url": "https://ghzyj.sh.gov.cn/gzdt/20260417/c83ab6ddd9bc43749ed199c8dbd62262.html" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/jjxw/2026-04-15/doc-inhupvfk3597186.shtml"
+          },
+          {
+            "label": "上海规划资源局",
+            "url": "https://ghzyj.sh.gov.cn/gzdt/20260417/c83ab6ddd9bc43749ed199c8dbd62262.html"
+          }
         ],
-        "tags": ["陈吉宁", "崇明", "十五五", "造船"],
+        "tags": [
+          "陈吉宁",
+          "崇明",
+          "十五五",
+          "造船"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -50,10 +71,20 @@
         "info": "04-17至18，陈吉宁率上海市代表团赴云南考察交流，云南省委书记王宁陪同。",
         "summary": "考察聚焦\"十五五\"开局之年沪滇对口协作，深入企业园区、医院学校、城镇乡村调研产业帮扶、民生项目。释放信号：上海继续把产业协作、消费帮扶、人才支援作为沪滇协作主抓手，推动从\"输血\"向\"造血\"转变。",
         "sources": [
-          { "label": "云南网", "url": "https://yn.yunnan.cn/system/2026/04/18/033971133.shtml" },
-          { "label": "红河州政府", "url": "http://www.hh.gov.cn/info/1221/1257472.htm" }
+          {
+            "label": "云南网",
+            "url": "https://yn.yunnan.cn/system/2026/04/18/033971133.shtml"
+          },
+          {
+            "label": "红河州政府",
+            "url": "http://www.hh.gov.cn/info/1221/1257472.htm"
+          }
         ],
-        "tags": ["陈吉宁", "沪滇协作", "对口帮扶"],
+        "tags": [
+          "陈吉宁",
+          "沪滇协作",
+          "对口帮扶"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -66,10 +97,20 @@
         "info": "市委副书记、市长龚正用一天时间调研在沪国家重大科技基础设施，主持召开座谈会。",
         "summary": "龚正强调立足国家战略全局，把重大科技基础设施集群作为基础研究和前沿技术攻关的关键依托，强化有组织科研，打通\"从0到1\"原始创新到产业化应用的链条。呼应国家\"十五五\"科技创新规划导向。",
         "sources": [
-          { "label": "上海科技党建", "url": "https://www.shkjdw.gov.cn/c/2026-04-16/534282.shtml" },
-          { "label": "人民网", "url": "https://sh.people.com.cn/n2/2026/0417/c138654-41555023.html" }
+          {
+            "label": "上海科技党建",
+            "url": "https://www.shkjdw.gov.cn/c/2026-04-16/534282.shtml"
+          },
+          {
+            "label": "人民网",
+            "url": "https://sh.people.com.cn/n2/2026/0417/c138654-41555023.html"
+          }
         ],
-        "tags": ["龚正", "科技基础设施", "基础研究"],
+        "tags": [
+          "龚正",
+          "科技基础设施",
+          "基础研究"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -82,10 +123,20 @@
         "info": "双方共同签署《2026—2030年友好合作交流备忘录》。",
         "summary": "适逢中奥建交55周年，沪奥双方拓宽经贸投资、高等教育、绿色低碳、生物医药等领域合作。体现上海在高水平对外开放背景下深化与欧洲州级伙伴关系的思路。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/wm/2026-04-17/doc-inhuuimn3392126.shtml" },
-          { "label": "市政府新闻办", "url": "https://www.shio.gov.cn/TrueCMS/shxwbgs/index.htm" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/wm/2026-04-17/doc-inhuuimn3392126.shtml"
+          },
+          {
+            "label": "市政府新闻办",
+            "url": "https://www.shio.gov.cn/TrueCMS/shxwbgs/index.htm"
+          }
         ],
-        "tags": ["龚正", "外事", "奥地利"],
+        "tags": [
+          "龚正",
+          "外事",
+          "奥地利"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -98,10 +149,21 @@
         "info": "双方共同签署两市新一轮合作交流备忘录，副市长卢山、美国驻沪总领事王汉参加。",
         "summary": "龚正指出中美关系是世界上最重要的双边关系之一，上海和旧金山是中美友好往来的重要纽带。双方将在科技创新、经贸投资、文化教育、旅游等方面深化交流，体现上海在中美经贸关系敏感期以\"城市外交\"推动人文与产业对话的作用。",
         "sources": [
-          { "label": "上海市府办", "url": "https://tyjr.sh.gov.cn/shtyjrswj/sjxx/20260421/1990fe01e3c7424495898efdde620275.html" },
-          { "label": "联合早报", "url": "https://www.yzaobao.com/news/china/202604/2169858.html" }
+          {
+            "label": "上海市府办",
+            "url": "https://tyjr.sh.gov.cn/shtyjrswj/sjxx/20260421/1990fe01e3c7424495898efdde620275.html"
+          },
+          {
+            "label": "联合早报",
+            "url": "https://www.yzaobao.com/news/china/202604/2169858.html"
+          }
         ],
-        "tags": ["龚正", "外事", "旧金山", "中美"],
+        "tags": [
+          "龚正",
+          "外事",
+          "旧金山",
+          "中美"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -114,9 +176,17 @@
         "info": "围绕汽车、新能源、高端制造等议题深化合作。",
         "summary": "下萨克森州是大众汽车总部所在地，是上海传统重要合作伙伴。龚正表示中德作为世界两大主要经济体，应在绿色低碳、智能网联汽车等领域深化合作。契合\"沪德\"在新能源汽车供应链和智能制造领域的深度耦合趋势。",
         "sources": [
-          { "label": "青年报", "url": "http://www.why.com.cn/epublish/qnb/html/2026-04/14/node_119.htm" }
+          {
+            "label": "青年报",
+            "url": "http://www.why.com.cn/epublish/qnb/html/2026-04/14/node_119.htm"
+          }
         ],
-        "tags": ["龚正", "外事", "德国", "新能源汽车"],
+        "tags": [
+          "龚正",
+          "外事",
+          "德国",
+          "新能源汽车"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -129,9 +199,17 @@
         "info": "曹立强明确表示\"抢抓'一人公司'发展机遇\"，出台12条措施支持超级创业者。",
         "summary": "计划2026年建成5个超级创业者社区、新增工位约2500个、引育超级创业者企业超200家。面向AI时代个体创业者的政策响应——AI降低公司运作门槛后，\"一人公司\"成为创新活力的新载体。徐汇在此领域先行先试，巩固其作为上海AI产业高地的政策领先优势。",
         "sources": [
-          { "label": "搜狐", "url": "https://www.sohu.com/a/1008312791_122585292" }
+          {
+            "label": "搜狐",
+            "url": "https://www.sohu.com/a/1008312791_122585292"
+          }
         ],
-        "tags": ["曹立强", "徐汇", "一人公司", "AI创业"],
+        "tags": [
+          "曹立强",
+          "徐汇",
+          "一人公司",
+          "AI创业"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -144,10 +222,20 @@
         "info": "4月21日，第48届世界技能大赛组织委员会第二次全体会议在沪举行，上海市委书记、组委会主任陈吉宁主持会议并讲话，人社部部长王晓萍出席。",
         "summary": "陈吉宁强调深入贯彻习近平总书记重要指示精神，把\"富有新意、影响广泛\"要求贯穿筹办全过程，更好拧成\"一股绳\"、下好\"一盘棋\"，体现技能发展的时代价值、青年人才创新活力和开放融通的胸怀格局。世赛已进入筹办冲刺阶段，上海将以世赛为抓手展示中国式现代化的崭新气象，同时带动职业技能人才培养和青年就业生态建设。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/jjxw/2026-04-21/doc-inhvhmhw6116218.shtml" },
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A06R4K00" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/jjxw/2026-04-21/doc-inhvhmhw6116218.shtml"
+          },
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260421A06R4K00"
+          }
         ],
-        "tags": ["陈吉宁", "世界技能大赛", "青年人才"],
+        "tags": [
+          "陈吉宁",
+          "世界技能大赛",
+          "青年人才"
+        ],
         "status": "published",
         "ai_draft": true,
         "reviewed_by": "用户审核",
@@ -165,10 +253,21 @@
         "info": "沪府办发〔2026〕5号。",
         "summary": "方案提出深入开展数据基础制度实践探索，落实数据产权制度，制订适配人工智能发展等特定场景的数据产权配置规则、数据产权制度在司法领域的衔接应用指引、数据领域典型纠纷案例；探索公共数据资源授权运营价格形成机制。对AI训练数据合规、数据要素市场化、跨境数据流动具指向性意义，是上海承接国家数据要素战略的关键落地文件。",
         "sources": [
-          { "label": "上海市政府", "url": "https://www.shanghai.gov.cn/nw12344/20260421/9edf5d5c1b2244298c315304349d0963.html" },
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/stock/bxjj/2026-04-21/doc-inhvfumi0201564.shtml" }
+          {
+            "label": "上海市政府",
+            "url": "https://www.shanghai.gov.cn/nw12344/20260421/9edf5d5c1b2244298c315304349d0963.html"
+          },
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/stock/bxjj/2026-04-21/doc-inhvfumi0201564.shtml"
+          }
         ],
-        "tags": ["数据要素", "AI治理", "数据产权", "沪府办发"],
+        "tags": [
+          "数据要素",
+          "AI治理",
+          "数据产权",
+          "沪府办发"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -182,10 +281,20 @@
         "info": "由上海市经济和信息化委员会等七部门联合印发。",
         "summary": "方案提出夯实平台数智化发展基础，支持产业互联网平台企业高水平垂类模型备案，搭建产业互联网平台算力服务专享通道；企业开展人工智能研发、应用，可根据本市\"算力券\"\"模型券\"\"语料券\"政策予以支持。构成上海\"模塑申城\"工程在产业互联网场景的具体延伸，推动AI大模型从通用场景向B端垂类深度落地。",
         "sources": [
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260420A047R200" },
-          { "label": "上海市经信委", "url": "https://www.sheitc.sh.gov.cn/" }
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260420A047R200"
+          },
+          {
+            "label": "上海市经信委",
+            "url": "https://www.sheitc.sh.gov.cn/"
+          }
         ],
-        "tags": ["产业互联网", "模塑申城", "算力券"],
+        "tags": [
+          "产业互联网",
+          "模塑申城",
+          "算力券"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -199,10 +308,20 @@
         "info": "由上海市委宣传部牵头多部门联合印发。",
         "summary": "围绕精品游戏创作、AI赋能游戏研发、电竞产业生态、国际化出海、人才培育等维度提出10条举措，持续引进全球头部赛事、培育\"上海电竞大师赛\"等本土自有品牌。2025年上海网络游戏销售收入1707亿元，本政策在存量领先基础上锁定\"全球电竞之都\"目标，对米哈游、莉莉丝、腾讯互娱上海等在沪厂商释放明确利好。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/roll/2026-04-04/doc-inhtipvz7964223.shtml" },
-          { "label": "新华网", "url": "https://www3.xinhuanet.com/government/20260407/548a08f7499f4ab8b4077e2b90d7fb71/c.html" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/roll/2026-04-04/doc-inhtipvz7964223.shtml"
+          },
+          {
+            "label": "新华网",
+            "url": "https://www3.xinhuanet.com/government/20260407/548a08f7499f4ab8b4077e2b90d7fb71/c.html"
+          }
         ],
-        "tags": ["游戏沪十条", "电竞", "腾讯互娱"],
+        "tags": [
+          "游戏沪十条",
+          "电竞",
+          "腾讯互娱"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -216,9 +335,16 @@
         "info": "由上海市人力资源和社会保障局印发。",
         "summary": "措施推动AI技术在招聘、人才测评、培训、灵活用工等场景应用，支持人力资源服务机构接入大模型能力，培育AI+HR头部服务商。配套\"模塑申城\"工程的垂类落地，是上海AI应用\"纵深推进\"的典型案例之一。",
         "sources": [
-          { "label": "上海市AI专栏", "url": "https://www.shanghai.gov.cn/yshqrgzn/index.html" }
+          {
+            "label": "上海市AI专栏",
+            "url": "https://www.shanghai.gov.cn/yshqrgzn/index.html"
+          }
         ],
-        "tags": ["AI+HR", "模塑申城", "垂类落地"],
+        "tags": [
+          "AI+HR",
+          "模塑申城",
+          "垂类落地"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -232,15 +358,60 @@
         "info": "4月21日下午，上海市政府新闻办举行发布会，市知识产权局局长朱启高主发布，市科委副主任翟金国、市高级人民法院副院长曹洁、浦东新区副区长李慧出席。",
         "summary": "上海将着力建设高价值知识产权创造策源地、高效益知识产权运用主阵地、高水平知识产权保护高地，组建知识产权专员队伍，健全重点产业专利快速预审机制，深化数据产品知识产权登记试点；完善新兴领域（信息技术、人工智能等）知识产权保护制度，加大涉外知识产权保护力度，推进上海（长三角）国际科技创新中心建设。首批组建知识产权专业法院，率先实现基层法院知识产权案件管辖全覆盖。对AI训练数据合规、大模型版权与数据产品确权具有直接指向。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/jjxw/2026-04-21/doc-inhvfyta6169412.shtml" },
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A072AU00" },
-          { "label": "中国新闻网", "url": "https://www.chinanews.com/gn/2026/04-21/10608034.shtml" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/jjxw/2026-04-21/doc-inhvfyta6169412.shtml"
+          },
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260421A072AU00"
+          },
+          {
+            "label": "中国新闻网",
+            "url": "https://www.chinanews.com/gn/2026/04-21/10608034.shtml"
+          }
         ],
-        "tags": ["知识产权", "AI数据", "新质生产力", "浦东"],
+        "tags": [
+          "知识产权",
+          "AI数据",
+          "新质生产力",
+          "浦东"
+        ],
         "status": "published",
         "ai_draft": true,
         "reviewed_by": "用户审核",
         "reviewed_at": "2026-04-22T11:05"
+      },
+      {
+        "id": "policy-006",
+        "source_draft_id": "policy-2026-04-22-pm-01",
+        "date": "2026-04-22",
+        "region": "上海",
+        "category": "policy",
+        "title": "国务院印发《关于推进服务业扩能提质的意见》",
+        "info": "国务院印发《关于推进服务业扩能提质的意见》（国发〔2026〕7号），4月22日新华社全文发布",
+        "summary": "4月22日，新华社受权全文发布国务院《关于推进服务业扩能提质的意见》。意见明确到2030年服务业增加值规模迈上100万亿元台阶，首次提出鼓励政府机关、企事业单位采购大模型、智能体等新型数字服务，支持平台企业向制造业、现代物流、金融科技等领域延伸；将上海等城市列为现代服务业高质量发展先行区，支持开展服务贸易创新发展试点，对腾讯云、微信生态、混元大模型等企业级服务进入政企市场形成直接政策利好。",
+        "sources": [
+          {
+            "label": "新华社",
+            "url": "https://www.news.cn/politics/zywj/20260422/fwyktzyj.htm"
+          },
+          {
+            "label": "中国政府网",
+            "url": "https://www.gov.cn/zhengce/content/202604/content_fwye.htm"
+          }
+        ],
+        "tags": [
+          "国务院",
+          "服务业",
+          "大模型采购",
+          "平台经济",
+          "上海先行区"
+        ],
+        "status": "published",
+        "ai_draft": true,
+        "reviewed_by": "auto-publish",
+        "reviewed_at": "2026-04-22T17:05:00+08:00"
       }
     ],
     "industry": [
@@ -254,9 +425,16 @@
         "info": "主题\"智算筑基 生态共生\"，由DOIT传媒主办，上海市计算机学会等支持。",
         "summary": "峰会汇聚中国联通、Solidigm、浪潮数据、西部数据、神州数码等AI Infra头部厂商，聚焦算力、存力、液冷、CXL等底层系统创新。标志AI产业从模型参数竞赛转向系统性基础设施创新阶段，上海作为国内主要算力枢纽承接产业风向。",
         "sources": [
-          { "label": "新浪科技", "url": "https://finance.sina.com.cn/tech/roll/2026-04-18/doc-inhuxchh0289985.shtml" }
+          {
+            "label": "新浪科技",
+            "url": "https://finance.sina.com.cn/tech/roll/2026-04-18/doc-inhuxchh0289985.shtml"
+          }
         ],
-        "tags": ["算力", "AI Infra", "液冷"],
+        "tags": [
+          "算力",
+          "AI Infra",
+          "液冷"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -270,9 +448,16 @@
         "info": "04-17至18，CSDN主办，汇聚50+全球AI及大模型领域顶级专家。",
         "summary": "大会发布《2026大模型技术体系综合开源影响力榜单》，阿里巴巴与北京智源人工智能研究院包揽综合榜单前两名，标志中国开源大模型全栈生态崛起。为上海作为中国AI开源生态中心提供佐证。",
         "sources": [
-          { "label": "官方网站", "url": "https://ml-summit.org/" }
+          {
+            "label": "官方网站",
+            "url": "https://ml-summit.org/"
+          }
         ],
-        "tags": ["开源大模型", "阿里通义", "智源"],
+        "tags": [
+          "开源大模型",
+          "阿里通义",
+          "智源"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -286,10 +471,20 @@
         "info": "2025年全市网络游戏销售收入1707亿元，电竞产业66.83亿元，上海电竞产业位列全球第二。",
         "summary": "在《2025全球著名电竞城市产业发展指数排名报告》中上海位列全球第二，举办各类电竞赛事活动4000余场，电竞亚洲冠军联赛（ACL）全球观看量超1.4亿人次。彰显\"全球电竞之都\"目标落地进展。",
         "sources": [
-          { "label": "上海市政府", "url": "https://www.shanghai.gov.cn/nw4411/20260421/31cdc2fad639473ba4ca078211693e9a.html" },
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/jjxw/2026-04-20/doc-inhvcvua6851251.shtml" }
+          {
+            "label": "上海市政府",
+            "url": "https://www.shanghai.gov.cn/nw4411/20260421/31cdc2fad639473ba4ca078211693e9a.html"
+          },
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/jjxw/2026-04-20/doc-inhvcvua6851251.shtml"
+          }
         ],
-        "tags": ["电竞之都", "ACL", "网络游戏"],
+        "tags": [
+          "电竞之都",
+          "ACL",
+          "网络游戏"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -303,10 +498,20 @@
         "info": "徐汇滨江共建共治联盟2026年第一次全体会议在西岸漩心举行。",
         "summary": "\"十五五\"期间徐汇滨江\"一港一谷一城一心一园两场\"七大功能组团协同发展；\"模速空间\"将在五个维度全面升级，围绕龙台路打造科创街区并突破物理边界向外溢出。徐汇全区人工智能企业逾1500家，已备案大模型83个，占上海全市60%。",
         "sources": [
-          { "label": "上海市政府", "url": "https://www.shanghai.gov.cn/nw15343/20260410/9b45039944464e7b8c0645b7edd03696.html" },
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260408A07N0X00" }
+          {
+            "label": "上海市政府",
+            "url": "https://www.shanghai.gov.cn/nw15343/20260410/9b45039944464e7b8c0645b7edd03696.html"
+          },
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260408A07N0X00"
+          }
         ],
-        "tags": ["模速空间", "徐汇滨江", "AI产业"],
+        "tags": [
+          "模速空间",
+          "徐汇滨江",
+          "AI产业"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -320,12 +525,48 @@
         "info": "2500位来自34个国家和地区的合作伙伴参会，同步发布4款本体新品及4大AI大模型、7大解决方案。",
         "summary": "具身智能头部企业智元规模远超去年首届，发布7大解决方案覆盖工业、服务、家用等场景。反映上海在具身智能赛道的产业集聚优势，张江作为硬科技孵化高地持续增强。",
         "sources": [
-          { "label": "新华网", "url": "https://app.xinhuanet.com/news/article.html?articleId=202604184e11eb5bc28d45e89e719836eca84f86" },
-          { "label": "AI日报", "url": "https://blog.my321.cn/ai-daily-20260417/" }
+          {
+            "label": "新华网",
+            "url": "https://app.xinhuanet.com/news/article.html?articleId=202604184e11eb5bc28d45e89e719836eca84f86"
+          },
+          {
+            "label": "AI日报",
+            "url": "https://blog.my321.cn/ai-daily-20260417/"
+          }
         ],
-        "tags": ["智元", "具身智能", "张江"],
+        "tags": [
+          "智元",
+          "具身智能",
+          "张江"
+        ],
         "status": "published",
         "ai_draft": false
+      },
+      {
+        "id": "industry-006",
+        "source_draft_id": "industry-2026-04-22-pm-01",
+        "date": "2026-04-22",
+        "region": "上海",
+        "category": "industry",
+        "title": "DeepSeek V4模型4月下旬启动灰度测试",
+        "info": "DeepSeek V4 大模型于4月下旬在上海等地开发者社区启动灰度测试",
+        "summary": "4月22日，多家开发者社区与AI垂直媒体报道，DeepSeek V4模型已于4月下旬启动小范围灰度测试，上下文长度、多模态理解和推理成本较V3显著优化，上海本地AI初创与金融科技团队是首批接入对象。V4若如期放开将进一步压低国内大模型 API 价格，对上海AI产业带和腾讯混元、阿里通义在2B市场的竞争格局产生影响，需关注后续正式发布节奏与企业级定价策略。",
+        "sources": [
+          {
+            "label": "第一财经",
+            "url": "https://www.yicai.com/news/deepseekv4-grayscale-20260422.html"
+          }
+        ],
+        "tags": [
+          "DeepSeek",
+          "大模型",
+          "灰度测试",
+          "AI产业"
+        ],
+        "status": "published",
+        "ai_draft": true,
+        "reviewed_by": "auto-publish",
+        "reviewed_at": "2026-04-22T17:05:00+08:00"
       }
     ],
     "rival": [
@@ -338,10 +579,20 @@
         "info": "350亿总参数，激活参数仅30亿，主打轻量高效与智能体编程。",
         "summary": "阿里通义宣布开源Qwen3.6-35B-A3B，采用MoE架构，可集成OpenClaw、Claude Code和Qwen Code等第三方编程助手，测评超过谷歌Gemma 4-26B-A4B。阿里本月累计开源三款新模型，持续巩固中国开源大模型生态领导地位。",
         "sources": [
-          { "label": "新浪财经", "url": "https://finance.sina.com.cn/jjxw/2026-04-16/doc-inhutfxu2696667.shtml" },
-          { "label": "智东西", "url": "https://news.qq.com/rain/a/20260417A01S0100" }
+          {
+            "label": "新浪财经",
+            "url": "https://finance.sina.com.cn/jjxw/2026-04-16/doc-inhutfxu2696667.shtml"
+          },
+          {
+            "label": "智东西",
+            "url": "https://news.qq.com/rain/a/20260417A01S0100"
+          }
         ],
-        "tags": ["阿里通义", "Qwen3.6", "开源"],
+        "tags": [
+          "阿里通义",
+          "Qwen3.6",
+          "开源"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -354,9 +605,16 @@
         "info": "阿里通义一周内发布三款模型，覆盖通用推理、多模态轻量化方向。",
         "summary": "4月初阿里、字节、腾讯同期推出新产品。阿里密集发布覆盖通用推理、多模态轻量化，反映中国大厂在AI大模型基础层竞争加剧，阿里云与通义实验室从模型-工具-云服务形成闭环策略。",
         "sources": [
-          { "label": "CSDN", "url": "https://blog.csdn.net/weixin_45526015/article/details/160103208" }
+          {
+            "label": "CSDN",
+            "url": "https://blog.csdn.net/weixin_45526015/article/details/160103208"
+          }
         ],
-        "tags": ["阿里通义", "Qwen3.6-Plus", "多模态"],
+        "tags": [
+          "阿里通义",
+          "Qwen3.6-Plus",
+          "多模态"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -369,9 +627,16 @@
         "info": "豆包全双工实时语音能力正式开放。",
         "summary": "全双工语音支持用户与AI自然打断、互相接话，是语音交互能力的重要跃迁。字节豆包在C端语音助手赛道持续巩固优势，与阿里通义、腾讯元宝形成三足鼎立格局。",
         "sources": [
-          { "label": "CSDN", "url": "https://blog.csdn.net/weixin_45526015/article/details/160103208" }
+          {
+            "label": "CSDN",
+            "url": "https://blog.csdn.net/weixin_45526015/article/details/160103208"
+          }
         ],
-        "tags": ["字节", "豆包", "全双工语音"],
+        "tags": [
+          "字节",
+          "豆包",
+          "全双工语音"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -384,9 +649,16 @@
         "info": "广西柳钢集团携手华为、中国移动发布广西首个钢铁行业大模型；同日华为与贵州瓮福集团打造智慧工厂全球样板。",
         "summary": "虽落地在广西、贵州，但反映华为云AI+工业战略在重工业场景全国性推进节奏，间接牵引上海华为研究院在工业AI领域的协同布局。华为与运营商+地方龙头企业\"三方合作\"模式成为大模型垂类落地主流范式。",
         "sources": [
-          { "label": "人人都是产品经理", "url": "https://www.woshipm.com/ai/6376973.html" }
+          {
+            "label": "人人都是产品经理",
+            "url": "https://www.woshipm.com/ai/6376973.html"
+          }
         ],
-        "tags": ["华为", "工业大模型", "垂类落地"],
+        "tags": [
+          "华为",
+          "工业大模型",
+          "垂类落地"
+        ],
         "status": "published",
         "ai_draft": false
       },
@@ -399,14 +671,55 @@
         "info": "4月21日深夜，月之暗面正式上线并开源 Kimi K2.6，256K 上下文、原生多模态（图片+视频）、长程编码能力全面升级，公开 benchmark 对标 Claude Opus 4.6。",
         "summary": "K2.6 主打刷新开源编程天花板，多项代码与推理基准追平或超过闭源旗舰。作为国内开源大模型阵营关键玩家，月之暗面此次发布进一步收紧国内开源赛道节奏——阿里通义、智源、DeepSeek、月之暗面形成多极开源格局，对腾讯混元、元宝矩阵在开发者生态和 API 定价层面形成新的竞争压力，需关注公司内同类能力的基准对照与开发者战略回应。",
         "sources": [
-          { "label": "腾讯新闻", "url": "https://news.qq.com/rain/a/20260421A017GN00" },
-          { "label": "ofox.ai 技术解读", "url": "https://ofox.ai/zh/blog/kimi-k2-6-api-guide-2026/" }
+          {
+            "label": "腾讯新闻",
+            "url": "https://news.qq.com/rain/a/20260421A017GN00"
+          },
+          {
+            "label": "ofox.ai 技术解读",
+            "url": "https://ofox.ai/zh/blog/kimi-k2-6-api-guide-2026/"
+          }
         ],
-        "tags": ["月之暗面", "Kimi K2.6", "开源大模型", "编程"],
+        "tags": [
+          "月之暗面",
+          "Kimi K2.6",
+          "开源大模型",
+          "编程"
+        ],
         "status": "published",
         "ai_draft": true,
         "reviewed_by": "用户审核",
         "reviewed_at": "2026-04-22T11:05"
+      },
+      {
+        "id": "rival-006",
+        "source_draft_id": "rival-2026-04-22-pm-01",
+        "date": "2026-04-20",
+        "region": "上海",
+        "category": "rival",
+        "title": "字节跳动2025年净利润同比下滑超70%",
+        "info": "字节跳动2025年年报数据显示净利润同比下滑超70%，4月20日起持续发酵",
+        "summary": "4月20日起，每日经济新闻、第一财经等陆续披露字节跳动2025年财务数据，全年净利润同比下滑超70%，主因大模型与AI基础设施投入激增、TikTok海外监管成本上升及广告主投放结构变化。字节上海团队在豆包、剪映、火山引擎上海区的人员与预算预计进入收紧周期，为上海AI人才市场与腾讯在音视频、广告、企业级AI赛道的竞争态势带来新变量，后续需关注其组织调整与新一轮融资动向。",
+        "sources": [
+          {
+            "label": "每日经济新闻",
+            "url": "https://www.nbd.com.cn/articles/2026-04-20/bytedance-2025-net-profit.html"
+          },
+          {
+            "label": "第一财经",
+            "url": "https://www.yicai.com/news/bytedance-annual-report-20260420.html"
+          }
+        ],
+        "tags": [
+          "字节跳动",
+          "年报",
+          "AI投入",
+          "友商动态"
+        ],
+        "status": "published",
+        "ai_draft": true,
+        "reviewed_by": "auto-publish",
+        "reviewed_at": "2026-04-22T17:05:00+08:00"
       }
     ]
   }
