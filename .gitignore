@@ -1,0 +1,27 @@
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# 临时/草稿
+data/drafts/
+*.tmp
+*.bak
+
+# 本地开发
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# 内部工具脚本（含腾讯文档密钥读取逻辑，仅本机运行，不对外发布）
+scripts/
+
+# 敏感文件兜底
+*.secret
+*.token
+secrets*
+**/secrets/

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华东政务信息 · 仪表盘 · 2026-04-22 11:07</title>
+<style>
+  :root {
+    --navy:#0f2a5f;--navy-light:#1a3d7a;--gold:#b8924a;--cream:#faf7f0;
+    --ink:#1a1a1a;--gray:#6b6b6b;--line:#e5e0d5;--bg:#fdfbf5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"PingFang SC","Microsoft YaHei","思源宋体","Source Han Serif SC",serif;
+       background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  header.main{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+              color:#fff;padding:48px 0 56px;border-bottom:3px solid var(--gold)}
+  header.main .wrap{display:flex;align-items:center;justify-content:space-between}
+  header.main h1{font-size:32px;font-weight:600;letter-spacing:4px;margin-bottom:8px}
+  header.main .sub{font-size:14px;color:rgba(255,255,255,0.75);letter-spacing:2px}
+  header.main .meta{text-align:right;font-size:13px;color:rgba(255,255,255,0.8);line-height:1.9}
+  header.main .meta .update{color:var(--gold);font-weight:500}
+
+  .stats{margin-top:-32px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:48px}
+  .card{background:#fff;padding:24px 20px;border-radius:4px;
+        box-shadow:0 2px 12px rgba(15,42,95,0.08);border-top:3px solid var(--gold);text-align:center}
+  .card .num{font-size:32px;font-weight:600;color:var(--navy);font-family:Georgia,serif;margin-bottom:4px}
+  .card .label{font-size:12px;color:var(--gray);letter-spacing:1px}
+  .card.total{border-top-color:var(--navy)}
+  .card.total .num{color:var(--gold)}
+
+  .main-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;margin-bottom:48px}
+
+  .section-title{display:flex;align-items:center;gap:12px;margin-bottom:20px;
+                 padding-bottom:12px;border-bottom:2px solid var(--navy)}
+  .section-title .tag{width:6px;height:22px;background:var(--gold)}
+  .section-title h2{color:var(--navy);font-size:19px;font-weight:600;letter-spacing:2px}
+  .section-title .more{margin-left:auto;font-size:13px;color:var(--gray);text-decoration:none}
+  .section-title .more:hover{color:var(--navy)}
+
+  .latest-list{background:#fff;padding:24px 28px;border-radius:4px;box-shadow:0 2px 12px rgba(15,42,95,0.06)}
+  .latest-item{padding:18px 0;border-bottom:1px dashed var(--line)}
+  .latest-item:last-child{border-bottom:none}
+  .latest-item .head{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+  .latest-item .date{font-size:12px;color:var(--gray);font-family:Georgia,serif}
+  .latest-item .badge{display:inline-block;padding:2px 10px;font-size:11px;color:#fff;
+                      background:var(--navy);border-radius:2px;letter-spacing:1px}
+  .latest-item .badge.policy{background:#8b4513}
+  .latest-item .badge.leader{background:#0f2a5f}
+  .latest-item .badge.industry{background:#2c5f5d}
+  .latest-item .badge.rival{background:#6b3a6b}
+  .latest-item .badge.hr{background:#8b2e2e}
+  .latest-item .region{font-size:12px;color:var(--navy);font-weight:600}
+  .latest-item h3{font-size:15px;color:var(--ink);font-weight:500;margin-bottom:6px;line-height:1.6}
+  .latest-item p{font-size:13px;color:var(--gray);line-height:1.7}
+
+  .side .panel{background:#fff;padding:24px 28px;border-radius:4px;
+               box-shadow:0 2px 12px rgba(15,42,95,0.06);margin-bottom:24px}
+
+  .chart-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:13px}
+  .chart-row .lbl{width:72px;color:var(--ink);flex-shrink:0}
+  .chart-row .bar-wrap{flex:1;background:var(--line);height:16px;border-radius:2px;
+                       overflow:hidden;position:relative}
+  .chart-row .bar{height:100%;background:linear-gradient(90deg,var(--navy),var(--navy-light));
+                  border-radius:2px}
+  .chart-row .val{width:32px;text-align:right;color:var(--navy);font-weight:600;font-family:Georgia,serif}
+
+  .archive-item{display:block;padding:14px 16px;background:var(--cream);border-radius:3px;
+                margin-bottom:10px;text-decoration:none;color:var(--ink);
+                border-left:3px solid var(--gold);transition:transform .2s,background .2s}
+  .archive-item:hover{background:#fff;border-left-color:var(--navy);transform:translateX(2px)}
+  .archive-item .mo{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:2px}
+  .archive-item .desc{font-size:12px;color:var(--gray)}
+  .archive-item.current{border-left-color:var(--navy);background:#fff}
+  .archive-item.current::after{content:"当期";float:right;font-size:11px;color:#fff;
+                               background:var(--gold);padding:2px 8px;border-radius:2px;
+                               letter-spacing:1px;margin-top:2px}
+
+  footer{background:var(--navy);color:rgba(255,255,255,0.7);padding:24px 0;text-align:center;
+        font-size:12px;letter-spacing:2px;margin-top:48px}
+  footer .gold{color:var(--gold)}
+
+  @media (max-width:960px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .main-grid{grid-template-columns:1fr}
+    header.main .wrap{flex-direction:column;text-align:center;gap:16px}
+    header.main .meta{text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="main">
+  <div class="wrap">
+    <div>
+      <h1>华东政务信息</h1>
+      <div class="sub">EAST CHINA · GOVERNMENT AFFAIRS BRIEFING</div>
+    </div>
+    <div class="meta">
+      出品 · 腾讯华东区域公共事务团队<br>
+      当期 · 2026 年 4 月<br>
+      <span class="update">最后更新：2026-04-22 11:07</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="card total"><div class="num">24</div><div class="label">本期条目总数</div></div>
+    <div class="card"><div class="num">1</div><div class="label">人事变动</div></div>
+    <div class="card"><div class="num">8</div><div class="label">领导动态</div></div>
+    <div class="card"><div class="num">5</div><div class="label">重大政策</div></div>
+    <div class="card"><div class="num">10</div><div class="label">行业 / 友商</div></div>
+  </div>
+
+  <div class="main-grid">
+    <div class="latest">
+      <div class="section-title">
+        <span class="tag"></span>
+        <h2>最新动态</h2>
+        <a class="more" href="archive/2026-04.html">查看完整月报 →</a>
+      </div>
+      <div class="latest-list">
+        <div class="latest-item">
+          <div class="head">
+            <span class="date">04-21</span>
+            <span class="badge leader">领导动态</span>
+            <span class="region">上海</span>
+          </div>
+          <h3>陈吉宁主持第48届世界技能大赛组委会第二次全体会议</h3>
+          <p>陈吉宁强调深入贯彻习近平总书记重要指示精神，把&quot;富有新意、影响广泛&quot;要求贯穿筹办全过程，更好拧成&quot;一股绳&quot;、下好&quot;一盘棋&quot;，体现技能发展的时代价值、青年人才创新活力和开放融通的胸怀格局。世赛已进入筹办冲刺阶段，上海将以世赛为抓手展示中国式现代化的崭新气象，同时带动职业技能人才培养和青年就业生态建设。</p>
+        </div>
+        <div class="latest-item">
+          <div class="head">
+            <span class="date">04-21</span>
+            <span class="badge policy">重大政策</span>
+            <span class="region">上海</span>
+          </div>
+          <h3>上海市政府办公厅印发《国家数字经济创新发展试验区（上海）实施方案》</h3>
+          <p>方案提出深入开展数据基础制度实践探索，落实数据产权制度，制订适配人工智能发展等特定场景的数据产权配置规则、数据产权制度在司法领域的衔接应用指引、数据领域典型纠纷案例；探索公共数据资源授权运营价格形成机制。对AI训练数据合规、数据要素市场化、跨境数据流动具指向性意义，是上海承接国家数据要素战略的关键落地文件。</p>
+        </div>
+        <div class="latest-item">
+          <div class="head">
+            <span class="date">04-21</span>
+            <span class="badge policy">重大政策</span>
+            <span class="region">上海</span>
+          </div>
+          <h3>市政府新闻办发布会部署知识产权强市建设与新质生产力发展</h3>
+          <p>上海将着力建设高价值知识产权创造策源地、高效益知识产权运用主阵地、高水平知识产权保护高地，组建知识产权专员队伍，健全重点产业专利快速预审机制，深化数据产品知识产权登记试点；完善新兴领域（信息技术、人工智能等）知识产权保护制度，加大涉外知识产权保护力度，推进上海（长三角）国际科技创新中心建设。首批组建知识产权专业法院，率…</p>
+        </div>
+        <div class="latest-item">
+          <div class="head">
+            <span class="date">04-21</span>
+            <span class="badge rival">友商动态</span>
+            <span class="region">上海</span>
+          </div>
+          <h3>月之暗面深夜发布开源新模型 Kimi K2.6</h3>
+          <p>K2.6 主打刷新开源编程天花板，多项代码与推理基准追平或超过闭源旗舰。作为国内开源大模型阵营关键玩家，月之暗面此次发布进一步收紧国内开源赛道节奏——阿里通义、智源、DeepSeek、月之暗面形成多极开源格局，对腾讯混元、元宝矩阵在开发者生态和 API 定价层面形成新的竞争压力，需关注公司内同类能力的基准对照与开发者战…</p>
+        </div>
+        <div class="latest-item">
+          <div class="head">
+            <span class="date">04-20</span>
+            <span class="badge leader">领导动态</span>
+            <span class="region">上海</span>
+          </div>
+          <h3>龚正会见美国旧金山市市长罗伟</h3>
+          <p>龚正指出中美关系是世界上最重要的双边关系之一，上海和旧金山是中美友好往来的重要纽带。双方将在科技创新、经贸投资、文化教育、旅游等方面深化交流，体现上海在中美经贸关系敏感期以&quot;城市外交&quot;推动人文与产业对话的作用。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="panel">
+        <div class="section-title"><span class="tag"></span><h2>板块分布 · 当期</h2></div>
+        
+        <div class="chart-row">
+          <div class="lbl">人事变动</div>
+          <div class="bar-wrap"><div class="bar" style="width:12.5%"></div></div>
+          <div class="val">1</div>
+        </div>
+        <div class="chart-row">
+          <div class="lbl">领导动态</div>
+          <div class="bar-wrap"><div class="bar" style="width:100.0%"></div></div>
+          <div class="val">8</div>
+        </div>
+        <div class="chart-row">
+          <div class="lbl">重大政策</div>
+          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
+          <div class="val">5</div>
+        </div>
+        <div class="chart-row">
+          <div class="lbl">行业信息</div>
+          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
+          <div class="val">5</div>
+        </div>
+        <div class="chart-row">
+          <div class="lbl">友商动态</div>
+          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
+          <div class="val">5</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="section-title"><span class="tag"></span><h2>月度归档</h2></div>
+        
+        <a href="archive/2026-04.html" class="archive-item current">
+          <div class="mo">2026 年 4 月</div>
+          <div class="desc">24 条 · 持续更新中</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  腾讯华东区域公共事务团队 · <span class="gold">East China PA</span> · 内部资料请勿外传
+</footer>
+
+</body>
+</html>
