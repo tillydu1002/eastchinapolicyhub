@@ -51,7 +51,7 @@
   .card.total{border-top-color:var(--navy)}
   .card.total .num{color:var(--gold)}
 
-  .main-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;margin-bottom:48px}
+  .main-grid{display:grid;grid-template-columns:2fr 0.85fr;gap:28px;margin-bottom:48px}
 
   .section-title{display:flex;align-items:center;gap:12px;margin-bottom:20px;
                  padding-bottom:12px;border-bottom:2px solid var(--navy)}
@@ -60,11 +60,15 @@
   .section-title .more{margin-left:auto;font-size:13px;color:var(--gray);text-decoration:none}
   .section-title .more:hover{color:var(--navy)}
 
-  .latest-list{background:#fff;padding:24px 28px;border-radius:4px;box-shadow:0 2px 12px rgba(15,42,95,0.06)}
-  .latest-item{padding:18px 0;border-bottom:1px dashed var(--line)}
-  .latest-item:last-child{border-bottom:none}
-  .latest-item .head{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
-  .latest-item .date{font-size:12px;color:var(--gray);font-family:Georgia,serif}
+  /* 今日动态（卡片网格） */
+  .latest-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .latest-item{display:block;background:#fff;padding:18px 22px;border-radius:5px;
+               box-shadow:0 2px 10px rgba(15,42,95,0.06);border-left:3px solid var(--navy);
+               text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s;
+               position:relative}
+  .latest-item:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(15,42,95,0.14);
+                     border-left-color:var(--gold)}
+  .latest-item .head{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
   .latest-item .badge{display:inline-block;padding:2px 10px;font-size:11px;color:#fff;
                       background:var(--navy);border-radius:2px;letter-spacing:1px}
   .latest-item .badge.policy{background:#8b4513}
@@ -73,8 +77,15 @@
   .latest-item .badge.rival{background:#6b3a6b}
   .latest-item .badge.hr{background:#8b2e2e}
   .latest-item .region{font-size:12px;color:var(--navy);font-weight:600}
-  .latest-item h3{font-size:15px;color:var(--ink);font-weight:500;margin-bottom:6px;line-height:1.6}
-  .latest-item p{font-size:13px;color:var(--gray);line-height:1.7}
+  .latest-item .goto{margin-left:auto;font-size:11px;color:var(--gold);opacity:0;
+                     transition:opacity .18s,transform .18s;letter-spacing:1px}
+  .latest-item:hover .goto{opacity:1;transform:translateX(2px)}
+  .latest-item h3{font-size:14.5px;color:var(--ink);font-weight:600;margin-bottom:8px;line-height:1.55}
+  .latest-item p{font-size:12.5px;color:var(--gray);line-height:1.75}
+  .empty-state{background:#fff;padding:40px 24px;border-radius:5px;text-align:center;
+               color:var(--gray);font-size:14px;line-height:2;
+               box-shadow:0 2px 10px rgba(15,42,95,0.05);border:1px dashed var(--line)}
+  .empty-state span{display:block;font-size:12px;color:#b5b5b5;margin-top:6px;letter-spacing:1px}
 
   /* 本月关注 Top 5 */
   .highlights{background:linear-gradient(135deg,#fdfbf5 0%,#faf7f0 100%);
@@ -84,8 +95,12 @@
   .highlights .section-title{border-bottom:2px solid var(--gold);margin-bottom:22px}
   .highlights .section-title h2{color:var(--navy)}
   .highlights .hl-sub{font-size:12px;color:var(--gray);margin-left:10px;letter-spacing:1px}
-  .hl-item{display:flex;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .hl-item{display:flex;gap:18px;padding:18px 8px;border-bottom:1px dashed var(--line);
+           text-decoration:none;color:inherit;border-radius:4px;
+           transition:background .18s,transform .18s;align-items:flex-start}
   .hl-item:last-child{border-bottom:none}
+  .hl-item:hover{background:rgba(255,255,255,0.7);transform:translateX(4px)}
+  .hl-item:hover .hl-goto{color:var(--gold);transform:translateX(3px)}
   .hl-rank{flex-shrink:0;width:44px;height:44px;border-radius:50%;
            background:linear-gradient(135deg,var(--navy),var(--navy-light));
            color:var(--gold);font-family:Georgia,serif;font-size:18px;font-weight:700;
@@ -110,6 +125,8 @@
             letter-spacing:0.5px}
   .hl-title{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:4px}
   .hl-sum{font-size:13px;color:var(--gray);line-height:1.7}
+  .hl-goto{flex-shrink:0;align-self:center;font-size:24px;color:#d5c9a8;
+           transition:color .18s,transform .18s;font-family:Georgia,serif}
 
   /* 首页小标签（与月报页 tx-tag 同套样式） */
   .tx-tag{display:inline-block;padding:2px 9px;font-size:11px;font-weight:500;
@@ -124,19 +141,6 @@
 
   .side .panel{background:#fff;padding:24px 28px;border-radius:4px;
                box-shadow:0 2px 12px rgba(15,42,95,0.06);margin-bottom:24px}
-
-  .chart-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-size:13px;
-             text-decoration:none;color:inherit;padding:4px 6px;margin-left:-6px;margin-right:-6px;
-             border-radius:3px;transition:background .15s}
-  .chart-row:hover{background:var(--cream)}
-  .chart-row .lbl{width:72px;color:var(--ink);flex-shrink:0}
-  .chart-row:hover .lbl{color:var(--navy);font-weight:600}
-  .chart-row .bar-wrap{flex:1;background:var(--line);height:16px;border-radius:2px;
-                       overflow:hidden;position:relative}
-  .chart-row .bar{height:100%;background:linear-gradient(90deg,var(--navy),var(--navy-light));
-                  border-radius:2px;transition:background .15s}
-  .chart-row:hover .bar{background:linear-gradient(90deg,var(--gold),#d4a24b)}
-  .chart-row .val{width:32px;text-align:right;color:var(--navy);font-weight:600;font-family:Georgia,serif}
 
   .archive-item{display:block;padding:14px 16px;background:var(--cream);border-radius:3px;
                 margin-bottom:10px;text-decoration:none;color:var(--ink);
@@ -158,6 +162,7 @@
   @media (max-width:960px){
     .stats{grid-template-columns:repeat(2,1fr)}
     .main-grid{grid-template-columns:1fr}
+    .latest-grid{grid-template-columns:1fr}
     header.main .wrap{flex-direction:column;text-align:center;gap:16px}
     header.main .meta{text-align:center}
     .hero{flex-direction:column;align-items:stretch}
@@ -175,7 +180,7 @@
     </div>
     <div class="meta">
       出品 · 腾讯华东区域公共事务团队<br>
-      <span class="update">最后更新：2026-04-22 14:18</span>
+      <span class="update">最后更新：2026-04-22 14:30</span>
     </div>
   </div>
 </header>
@@ -185,7 +190,7 @@
   <!-- 当月进行中大卡片 -->
   <div class="hero">
     <div class="hl">
-      <div class="banner">【2026 年 4 月 · 进行中】截至 04月21日 14:18，已收录 24 条<span class="state-badge inprogress">进行中</span></div>
+      <div class="banner">【2026 年 4 月 · 进行中】截至 04月21日 14:30，已收录 24 条<span class="state-badge inprogress">进行中</span></div>
       <div class="sub">每日 09:00 / 17:00 累加更新 · 月末自动封存归档</div>
     </div>
     <a class="cta" href="archive/2026-04.html">查看完整月报 →</a>
@@ -208,7 +213,7 @@
       <a class="more" href="archive/2026-04.html">查看完整月报 →</a>
     </div>
     
-        <div class="hl-item">
+        <a class="hl-item" href="archive/2026-04.html#item-policy-005">
           <div class="hl-rank">01</div>
           <div class="hl-body">
             <div class="hl-head">
@@ -221,8 +226,9 @@
             <div class="hl-title">市政府新闻办发布会部署知识产权强市建设与新质生产力发展</div>
             <div class="hl-sum">上海将着力建设高价值知识产权创造策源地、高效益知识产权运用主阵地、高水平知识产权保护高地，组建知识产权专员队伍，健全重点产业专利快速预审机制，深化数据产品知识产权登记试点；完善新兴领域（信息技术、人工智能等）知识产权保护制度，加大涉外知识产权保护力度，推进上海（长三角）国际科技创…</div>
           </div>
-        </div>
-        <div class="hl-item">
+          <div class="hl-goto">›</div>
+        </a>
+        <a class="hl-item" href="archive/2026-04.html#item-policy-003">
           <div class="hl-rank">02</div>
           <div class="hl-body">
             <div class="hl-head">
@@ -235,8 +241,9 @@
             <div class="hl-title">上海印发《关于支持游戏电竞产业发展的若干举措》（&quot;游戏沪十条&quot;）</div>
             <div class="hl-sum">围绕精品游戏创作、AI赋能游戏研发、电竞产业生态、国际化出海、人才培育等维度提出10条举措，持续引进全球头部赛事、培育&quot;上海电竞大师赛&quot;等本土自有品牌。2025年上海网络游戏销售收入1707亿元，本政策在存量领先基础上锁定&quot;全球电竞之都&quot;目标，对米哈游、莉莉丝、腾讯互娱上海等在沪…</div>
           </div>
-        </div>
-        <div class="hl-item">
+          <div class="hl-goto">›</div>
+        </a>
+        <a class="hl-item" href="archive/2026-04.html#item-policy-001">
           <div class="hl-rank">03</div>
           <div class="hl-body">
             <div class="hl-head">
@@ -249,8 +256,9 @@
             <div class="hl-title">上海市政府办公厅印发《国家数字经济创新发展试验区（上海）实施方案》</div>
             <div class="hl-sum">方案提出深入开展数据基础制度实践探索，落实数据产权制度，制订适配人工智能发展等特定场景的数据产权配置规则、数据产权制度在司法领域的衔接应用指引、数据领域典型纠纷案例；探索公共数据资源授权运营价格形成机制。对AI训练数据合规、数据要素市场化、跨境数据流动具指向性意义，是上海承接国家…</div>
           </div>
-        </div>
-        <div class="hl-item">
+          <div class="hl-goto">›</div>
+        </a>
+        <a class="hl-item" href="archive/2026-04.html#item-policy-002">
           <div class="hl-rank">04</div>
           <div class="hl-body">
             <div class="hl-head">
@@ -263,8 +271,9 @@
             <div class="hl-title">市经信委等7部门印发《上海市推动产业互联网平台赋能产业发展行动方案（2026—2028年）》</div>
             <div class="hl-sum">方案提出夯实平台数智化发展基础，支持产业互联网平台企业高水平垂类模型备案，搭建产业互联网平台算力服务专享通道；企业开展人工智能研发、应用，可根据本市&quot;算力券&quot;&quot;模型券&quot;&quot;语料券&quot;政策予以支持。构成上海&quot;模塑申城&quot;工程在产业互联网场景的具体延伸，推动AI大模型从通用场景向B端垂类深…</div>
           </div>
-        </div>
-        <div class="hl-item">
+          <div class="hl-goto">›</div>
+        </a>
+        <a class="hl-item" href="archive/2026-04.html#item-policy-004">
           <div class="hl-rank">05</div>
           <div class="hl-body">
             <div class="hl-head">
@@ -277,7 +286,8 @@
             <div class="hl-title">市人社局印发《上海市支持人工智能赋能人力资源服务业转型升级的若干措施》</div>
             <div class="hl-sum">措施推动AI技术在招聘、人才测评、培训、灵活用工等场景应用，支持人力资源服务机构接入大模型能力，培育AI+HR头部服务商。配套&quot;模塑申城&quot;工程的垂类落地，是上海AI应用&quot;纵深推进&quot;的典型案例之一。</div>
           </div>
-        </div>
+          <div class="hl-goto">›</div>
+        </a>
   </div>
 
   <div class="main-grid">
@@ -285,124 +295,53 @@
       <div class="section-title">
         <span class="tag"></span>
         <h2>今日动态</h2>
-        <span class="hl-sub">最新更新 · 04月21日</span>
+        <span class="hl-sub">04月21日 · 仅当日更新</span>
         <a class="more" href="archive/2026-04.html">查看完整月报 →</a>
       </div>
-      <div class="latest-list">
-        <div class="latest-item">
+      <div class="latest-grid">
+        <a class="latest-item" href="archive/2026-04.html#item-policy-005">
           <div class="head">
-            <span class="date">04-21</span>
             <span class="badge policy">重大政策</span>
             <span class="region">上海</span>
             <span class="tx-tag tx-industry">腾讯业务赛道</span>
+            <span class="goto">查看 →</span>
           </div>
           <h3>市政府新闻办发布会部署知识产权强市建设与新质生产力发展</h3>
-          <p>上海将着力建设高价值知识产权创造策源地、高效益知识产权运用主阵地、高水平知识产权保护高地，组建知识产权专员队伍，健全重点产业专利快速预审机制，深化数据产品知识产权登记试点；完善新兴领域（信息技术、人工智能等）知识产权保护制度，加大涉外知识产权保护力度，推进上海（长三角）国际科技创新中心建设。首批组建知识产权专业法院，率…</p>
-        </div>
-        <div class="latest-item">
+          <p>上海将着力建设高价值知识产权创造策源地、高效益知识产权运用主阵地、高水平知识产权保护高地，组建知识产权专员队伍，健全重点产业专利快速预审机制，深化数据产品知识产权登记试点；完善新兴领域（信息技术、人工智能等）知识产权保护制度，加大涉外知识产权保护力度，推进上海（长三角）国际科技创…</p>
+        </a>
+        <a class="latest-item" href="archive/2026-04.html#item-policy-001">
           <div class="head">
-            <span class="date">04-21</span>
             <span class="badge policy">重大政策</span>
             <span class="region">上海</span>
             <span class="tx-tag tx-industry">腾讯业务赛道</span>
+            <span class="goto">查看 →</span>
           </div>
           <h3>上海市政府办公厅印发《国家数字经济创新发展试验区（上海）实施方案》</h3>
-          <p>方案提出深入开展数据基础制度实践探索，落实数据产权制度，制订适配人工智能发展等特定场景的数据产权配置规则、数据产权制度在司法领域的衔接应用指引、数据领域典型纠纷案例；探索公共数据资源授权运营价格形成机制。对AI训练数据合规、数据要素市场化、跨境数据流动具指向性意义，是上海承接国家数据要素战略的关键落地文件。</p>
-        </div>
-        <div class="latest-item">
+          <p>方案提出深入开展数据基础制度实践探索，落实数据产权制度，制订适配人工智能发展等特定场景的数据产权配置规则、数据产权制度在司法领域的衔接应用指引、数据领域典型纠纷案例；探索公共数据资源授权运营价格形成机制。对AI训练数据合规、数据要素市场化、跨境数据流动具指向性意义，是上海承接国家…</p>
+        </a>
+        <a class="latest-item" href="archive/2026-04.html#item-rival-005">
           <div class="head">
-            <span class="date">04-21</span>
             <span class="badge rival">友商动态</span>
             <span class="region">上海</span>
             <span class="tx-tag tx-rival">竞品参考</span>
+            <span class="goto">查看 →</span>
           </div>
           <h3>月之暗面深夜发布开源新模型 Kimi K2.6</h3>
-          <p>K2.6 主打刷新开源编程天花板，多项代码与推理基准追平或超过闭源旗舰。作为国内开源大模型阵营关键玩家，月之暗面此次发布进一步收紧国内开源赛道节奏——阿里通义、智源、DeepSeek、月之暗面形成多极开源格局，对腾讯混元、元宝矩阵在开发者生态和 API 定价层面形成新的竞争压力，需关注公司内同类能力的基准对照与开发者战…</p>
-        </div>
-        <div class="latest-item">
+          <p>K2.6 主打刷新开源编程天花板，多项代码与推理基准追平或超过闭源旗舰。作为国内开源大模型阵营关键玩家，月之暗面此次发布进一步收紧国内开源赛道节奏——阿里通义、智源、DeepSeek、月之暗面形成多极开源格局，对腾讯混元、元宝矩阵在开发者生态和 API 定价层面形成新的竞争压力，…</p>
+        </a>
+        <a class="latest-item" href="archive/2026-04.html#item-leader-008">
           <div class="head">
-            <span class="date">04-21</span>
             <span class="badge leader">领导动态</span>
             <span class="region">上海</span>
             
+            <span class="goto">查看 →</span>
           </div>
           <h3>陈吉宁主持第48届世界技能大赛组委会第二次全体会议</h3>
-          <p>陈吉宁强调深入贯彻习近平总书记重要指示精神，把&quot;富有新意、影响广泛&quot;要求贯穿筹办全过程，更好拧成&quot;一股绳&quot;、下好&quot;一盘棋&quot;，体现技能发展的时代价值、青年人才创新活力和开放融通的胸怀格局。世赛已进入筹办冲刺阶段，上海将以世赛为抓手展示中国式现代化的崭新气象，同时带动职业技能人才培养和青年就业生态建设。</p>
-        </div>
-        <div class="latest-item">
-          <div class="head">
-            <span class="date">04-20</span>
-            <span class="badge policy">重大政策</span>
-            <span class="region">上海</span>
-            <span class="tx-tag tx-industry">腾讯业务赛道</span>
-          </div>
-          <h3>市经信委等7部门印发《上海市推动产业互联网平台赋能产业发展行动方案（2026—2028年）》</h3>
-          <p>方案提出夯实平台数智化发展基础，支持产业互联网平台企业高水平垂类模型备案，搭建产业互联网平台算力服务专享通道；企业开展人工智能研发、应用，可根据本市&quot;算力券&quot;&quot;模型券&quot;&quot;语料券&quot;政策予以支持。构成上海&quot;模塑申城&quot;工程在产业互联网场景的具体延伸，推动AI大模型从通用场景向B端垂类深度落地。</p>
-        </div>
-        <div class="latest-item">
-          <div class="head">
-            <span class="date">04-20</span>
-            <span class="badge leader">领导动态</span>
-            <span class="region">上海</span>
-            
-          </div>
-          <h3>龚正会见美国旧金山市市长罗伟</h3>
-          <p>龚正指出中美关系是世界上最重要的双边关系之一，上海和旧金山是中美友好往来的重要纽带。双方将在科技创新、经贸投资、文化教育、旅游等方面深化交流，体现上海在中美经贸关系敏感期以&quot;城市外交&quot;推动人文与产业对话的作用。</p>
-        </div>
-        <div class="latest-item">
-          <div class="head">
-            <span class="date">04-20</span>
-            <span class="badge industry">行业信息</span>
-            <span class="region">上海</span>
-            <span class="tx-tag tx-industry">腾讯业务赛道</span>
-          </div>
-          <h3>2026上海网络出版管理工作会议召开</h3>
-          <p>在《2025全球著名电竞城市产业发展指数排名报告》中上海位列全球第二，举办各类电竞赛事活动4000余场，电竞亚洲冠军联赛（ACL）全球观看量超1.4亿人次。彰显&quot;全球电竞之都&quot;目标落地进展。</p>
-        </div>
-        <div class="latest-item">
-          <div class="head">
-            <span class="date">04-17</span>
-            <span class="badge industry">行业信息</span>
-            <span class="region">上海</span>
-            <span class="tx-tag tx-industry">腾讯业务赛道</span>
-          </div>
-          <h3>2026奇点智能技术大会在沪举办</h3>
-          <p>大会发布《2026大模型技术体系综合开源影响力榜单》，阿里巴巴与北京智源人工智能研究院包揽综合榜单前两名，标志中国开源大模型全栈生态崛起。为上海作为中国AI开源生态中心提供佐证。</p>
-        </div>
-      </div>
+          <p>陈吉宁强调深入贯彻习近平总书记重要指示精神，把&quot;富有新意、影响广泛&quot;要求贯穿筹办全过程，更好拧成&quot;一股绳&quot;、下好&quot;一盘棋&quot;，体现技能发展的时代价值、青年人才创新活力和开放融通的胸怀格局。世赛已进入筹办冲刺阶段，上海将以世赛为抓手展示中国式现代化的崭新气象，同时带动职业技能人才培养…</p>
+        </a></div>
     </div>
 
     <div class="side">
-      <div class="panel">
-        <div class="section-title"><span class="tag"></span><h2>板块分布 · 本月</h2></div>
-        
-        <a class="chart-row" href="archive/2026-04.html#sec-hr">
-          <div class="lbl">人事变动</div>
-          <div class="bar-wrap"><div class="bar" style="width:12.5%"></div></div>
-          <div class="val">1</div>
-        </a>
-        <a class="chart-row" href="archive/2026-04.html#sec-leader">
-          <div class="lbl">领导动态</div>
-          <div class="bar-wrap"><div class="bar" style="width:100.0%"></div></div>
-          <div class="val">8</div>
-        </a>
-        <a class="chart-row" href="archive/2026-04.html#sec-policy">
-          <div class="lbl">重大政策</div>
-          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
-          <div class="val">5</div>
-        </a>
-        <a class="chart-row" href="archive/2026-04.html#sec-industry">
-          <div class="lbl">行业信息</div>
-          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
-          <div class="val">5</div>
-        </a>
-        <a class="chart-row" href="archive/2026-04.html#sec-rival">
-          <div class="lbl">友商动态</div>
-          <div class="bar-wrap"><div class="bar" style="width:62.5%"></div></div>
-          <div class="val">5</div>
-        </a>
-      </div>
-
       <div class="panel">
         <div class="section-title"><span class="tag"></span><h2>月度归档</h2></div>
         
