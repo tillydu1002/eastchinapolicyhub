@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>华东政务信息 · 2026 年 5 月</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+       background:#f4f5f7;color:#2c3e50;line-height:1.6}
+  .wrap{max-width:1400px;margin:0 auto;padding:32px 40px 60px;background:#fff;min-height:100vh}
+  .back{display:inline-block;margin-bottom:20px;color:#0f2a5f;text-decoration:none;font-size:13px;
+        padding:6px 14px;background:#f4f5f7;border-radius:3px;border-left:3px solid #b8924a}
+  .back:hover{background:#ecf0f3}
+  header.ap{border-bottom:3px solid #2c3e50;padding-bottom:20px;margin-bottom:28px}
+  .eyebrow{font-size:13px;color:#7f8c8d;letter-spacing:3px;margin-bottom:8px}
+  h1{font-size:30px;margin:0 0 6px;font-weight:700;color:#1a2533}
+  .arc-tag{display:inline-block;margin-left:12px;padding:3px 12px;background:#8b2e2e;color:#fff;
+           font-size:13px;border-radius:3px;vertical-align:middle}
+  .meta{font-size:14px;color:#5d6d7e;margin-top:10px}
+  .meta span{margin-right:18px}
+  .meta strong{color:#c0392b}
+  .stat-bar{display:flex;gap:12px;margin:20px 0 30px;flex-wrap:wrap}
+  .stat{flex:1;min-width:130px;padding:14px 16px;border-radius:6px;
+        background:#f8f9fb;border-left:4px solid var(--c,#34495e);
+        text-decoration:none;color:inherit;display:block;
+        transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+  .stat:hover{background:#fff;transform:translateY(-2px);
+              box-shadow:0 4px 14px rgba(15,42,95,0.12);cursor:pointer}
+  .stat-num{font-size:22px;font-weight:700;color:#1a2533}
+  .stat-lbl{font-size:13px;color:#7f8c8d;margin-top:2px;display:flex;align-items:center;gap:4px}
+  .stat-lbl::after{content:"›";margin-left:auto;color:var(--c,#34495e);font-size:16px;
+                    font-weight:700;opacity:0;transition:opacity .15s}
+  .stat:hover .stat-lbl::after{opacity:1}
+  .sec{margin-bottom:36px;scroll-margin-top:20px}
+  .sec-title{font-size:18px;font-weight:700;color:#1a2533;display:flex;align-items:center;
+             gap:10px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e1e5ea}
+  .sec-bar{width:4px;height:18px;background:var(--sec-color);border-radius:2px}
+  .sec-count{margin-left:auto;font-size:13px;font-weight:500;color:var(--sec-color);
+             background:color-mix(in srgb,var(--sec-color) 12%,#fff);padding:2px 10px;border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead th{background:#2c3e50;color:#fff;padding:10px 12px;text-align:left;
+           font-weight:600;font-size:13px;letter-spacing:0.5px}
+  tbody td{padding:12px 14px;border-bottom:1px solid #ecf0f3;vertical-align:top}
+  tbody tr:nth-child(even){background:#fafbfc}
+  tbody tr:hover{background:#f0f4f8}
+  tbody tr{scroll-margin-top:60px;transition:background .3s}
+  tbody tr:target{background:#fff8dc !important;box-shadow:inset 4px 0 0 #b8924a;animation:flash 1.2s ease-out}
+  @keyframes flash{0%{background:#fffacd}60%{background:#fff8dc}100%{background:#fff8dc}}
+  .col-region{font-weight:600;color:#2c3e50}
+  .cat-main{font-weight:600;color:var(--sec-color);font-size:13px}
+  .cat-date{color:#95a5a6;font-size:12px;margin-top:3px}
+  .info-title{font-weight:600;color:#1a2533;margin-bottom:5px;line-height:1.4;
+               display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+  .info-body{font-size:13px;color:#5d6d7e}
+  .detail-btn{display:inline-block;margin-top:8px;padding:3px 10px;font-size:11px;
+              color:#b8924a;text-decoration:none;border:1px solid rgba(184,146,74,0.35);
+              border-radius:10px;letter-spacing:0.5px;transition:all .15s}
+  .detail-btn:hover{background:#b8924a;color:#fff;border-color:#b8924a}
+  /* 腾讯关联小标签 */
+  .tx-tag{display:inline-block;padding:2px 9px;font-size:11px;font-weight:500;
+          border-radius:10px;letter-spacing:0.5px;line-height:1.5;white-space:nowrap;
+          vertical-align:middle;flex-shrink:0}
+  .tx-tag.tx-direct{background:linear-gradient(135deg,#c0392b,#e74c3c);color:#fff;
+                     box-shadow:0 1px 3px rgba(192,57,43,0.25)}
+  .tx-tag.tx-industry{background:linear-gradient(135deg,#d4a24b,#e8c070);color:#fff;
+                       box-shadow:0 1px 3px rgba(184,146,74,0.25)}
+  .tx-tag.tx-rival{background:linear-gradient(135deg,#6b3a6b,#8e5a8e);color:#fff;
+                    box-shadow:0 1px 3px rgba(107,58,107,0.25)}
+  .col-src a{color:#2980b9;text-decoration:none;font-size:13px;display:block;margin-bottom:2px}
+  .col-src a:hover{text-decoration:underline}
+  .col-ana{color:#2c3e50;font-size:13.5px;line-height:1.7}
+  .empty{text-align:center;color:#bdc3c7;padding:20px;font-style:italic}
+  footer{margin-top:40px;padding-top:20px;border-top:1px solid #ecf0f3;
+         font-size:12px;color:#95a5a6;text-align:center;line-height:1.8}
+  @media print{body{background:#fff}.wrap{padding:20px;max-width:none}.back{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="../index.html" class="back">← 返回首页</a>
+  <header class="ap">
+    <div class="eyebrow">EAST CHINA · GOVERNMENT AFFAIRS BRIEFING</div>
+    <h1>华东政务信息 · 2026 年 5 月</h1>
+    <div class="meta">
+      <span>🔄 站点刷新：<strong>2026-04-30 17:07</strong></span>
+      <span>📊 本月累计：<strong>0 条</strong></span>
+      <span>🏛 腾讯华东区域公共事务团队</span>
+    </div>
+  </header>
+
+  <div class="stat-bar">
+    <a class="stat" href="#sec-hr" style="--c:#8b2e2e"><div class="stat-num">0</div><div class="stat-lbl">人事变动</div></a>
+    <a class="stat" href="#sec-leader" style="--c:#0f2a5f"><div class="stat-num">0</div><div class="stat-lbl">领导动态</div></a>
+    <a class="stat" href="#sec-policy" style="--c:#8b4513"><div class="stat-num">0</div><div class="stat-lbl">重大政策</div></a>
+    <a class="stat" href="#sec-industry" style="--c:#2c5f5d"><div class="stat-num">0</div><div class="stat-lbl">行业信息</div></a>
+    <a class="stat" href="#sec-rival" style="--c:#6b3a6b"><div class="stat-num">0</div><div class="stat-lbl">友商动态</div></a>
+  </div>
+
+    <section class="sec" id="sec-hr" style="--sec-color:#8b2e2e">
+      <h2 class="sec-title"><span class="sec-bar"></span>一、人事变动<span class="sec-count">0条</span></h2>
+      <table class="sec-table">
+        <thead>
+          <tr>
+            <th style="width:7%">区域</th>
+            <th style="width:11%">分类 / 日期</th>
+            <th style="width:26%">项目 / 信息</th>
+            <th style="width:14%">信源</th>
+            <th style="width:42%">概要</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr><td colspan="5" class="empty">本板块暂无已审发条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="sec" id="sec-leader" style="--sec-color:#0f2a5f">
+      <h2 class="sec-title"><span class="sec-bar"></span>二、领导动态<span class="sec-count">0条</span></h2>
+      <table class="sec-table">
+        <thead>
+          <tr>
+            <th style="width:7%">区域</th>
+            <th style="width:11%">分类 / 日期</th>
+            <th style="width:26%">项目 / 信息</th>
+            <th style="width:14%">信源</th>
+            <th style="width:42%">概要</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr><td colspan="5" class="empty">本板块暂无已审发条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="sec" id="sec-policy" style="--sec-color:#8b4513">
+      <h2 class="sec-title"><span class="sec-bar"></span>三、重大政策<span class="sec-count">0条</span></h2>
+      <table class="sec-table">
+        <thead>
+          <tr>
+            <th style="width:7%">区域</th>
+            <th style="width:11%">分类 / 日期</th>
+            <th style="width:26%">项目 / 信息</th>
+            <th style="width:14%">信源</th>
+            <th style="width:42%">概要</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr><td colspan="5" class="empty">本板块暂无已审发条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="sec" id="sec-industry" style="--sec-color:#2c5f5d">
+      <h2 class="sec-title"><span class="sec-bar"></span>四、行业信息<span class="sec-count">0条</span></h2>
+      <table class="sec-table">
+        <thead>
+          <tr>
+            <th style="width:7%">区域</th>
+            <th style="width:11%">分类 / 日期</th>
+            <th style="width:26%">项目 / 信息</th>
+            <th style="width:14%">信源</th>
+            <th style="width:42%">概要</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr><td colspan="5" class="empty">本板块暂无已审发条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="sec" id="sec-rival" style="--sec-color:#6b3a6b">
+      <h2 class="sec-title"><span class="sec-bar"></span>五、友商动态<span class="sec-count">0条</span></h2>
+      <table class="sec-table">
+        <thead>
+          <tr>
+            <th style="width:7%">区域</th>
+            <th style="width:11%">分类 / 日期</th>
+            <th style="width:26%">项目 / 信息</th>
+            <th style="width:14%">信源</th>
+            <th style="width:42%">概要</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr><td colspan="5" class="empty">本板块暂无已审发条目</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  <footer>
+    本文件由华东 PA 月报自动化系统生成 · 仅渲染 status=published 条目 · 内部使用，请勿外传
+  </footer>
+</div>
+</body>
+</html>
